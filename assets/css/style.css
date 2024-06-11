@@ -9,10 +9,20 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+@font-face {
+  font-family: 'horatio';
+  src: url('../font/Horatio\ D\ Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'horatio';
   color: #444444;
 }
+
+
 
 a {
   color: #777D54;
@@ -35,7 +45,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto", sans-serif;
+  font-family: 'horatio';
 }
 
 .bg-theme {
@@ -183,6 +193,7 @@ h6 {
   z-index: 997;
   padding: 0px 0;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'horatio';
 }
 
 @media (max-width: 992px) {
@@ -1049,6 +1060,11 @@ section {
   position: relative;
   overflow: visible;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.modal-address p i{
+  color: #767F56;
+  
 }
 
 .service-img {
