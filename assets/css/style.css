@@ -1300,16 +1300,29 @@ svg {
   }
 }
 
-
+/* document section  */
 
 /*--------------------------------------------------------------*/
 .doctor {
   margin-top: 5.5%;
 }
 
+
+@media (min-width: 1800px) {
+  .res{
+    width: auto !important;
+  }
+}
+/* 
 .document{
   margin-top: 5.5%;
 }
+@media only screen and (max-width: 900px) {
+  .col-6{
+    width:50%;
+  }  
+}
+  
 
 /*--------------------------------------------------------------
 # Gallery
