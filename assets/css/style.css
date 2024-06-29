@@ -1302,6 +1302,10 @@ svg {
 
 /* document section  */
 
+.document {
+  margin-top: 5.5%;
+}
+
 /*--------------------------------------------------------------*/
 .doctor {
   margin-top: 5.5%;
