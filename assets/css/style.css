@@ -1073,7 +1073,7 @@ section {
 
 .service-img {
   background-color: var(--light-bg) !important;
-  height: 40%;
+  height: 100%;
   width: 100%;
   border-radius: .5rem;
   transition: .3s ease;
@@ -1300,16 +1300,29 @@ svg {
   }
 }
 
-
+/* document section  */
 
 /*--------------------------------------------------------------*/
 .doctor {
   margin-top: 5.5%;
 }
 
+
+@media (min-width: 1800px) {
+  .res{
+    width: auto !important;
+  }
+}
+/* 
 .document{
   margin-top: 5.5%;
 }
+@media only screen and (max-width: 900px) {
+  .col-6{
+    width:50%;
+  }  
+}
+  
 
 /*--------------------------------------------------------------
 # Gallery
