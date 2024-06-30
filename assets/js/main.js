@@ -272,3 +272,6 @@
   new PureCounter();
 
 })()
+
+
+// rating section 
