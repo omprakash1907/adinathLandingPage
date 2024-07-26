@@ -19,8 +19,8 @@ let element = `
             aria-controls="offcanvasNavbar"></i>
     </nav><!-- .navbar -->
 
-    <a href="#appointment" class="appointment-btn scrollto d-none d-lg-block" data-bs-toggle="modal"
-        data-bs-target="#donation"><span class="d-none d-md-inline">Make</span> Donation</a>
+    <a href="https://formbuilder.ccavenue.com/live/icici-bank/shree-aadinath-yuva-charitable-trust" target="_blank" class="appointment-btn scrollto d-none d-lg-block" 
+       ><span class="d-none d-md-inline">Make</span> Donation</a>
 </div>
 
 <!-- offcanvas menu -->
@@ -60,22 +60,7 @@ let element = `
 </div>
 <!-- offcanvas menu -->
 
-<!-- modal -->
-<div class="modal fade" id="donation" data-bs-backdrop="false" data-bs-keyboard="false" tabindex="-1"
-    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Bank Details</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <img src="assets/img/Bank Details Post2.webp" alt="" class="img-fluid">
-            </div>
-        </div>
-    </div>
-</div>
-<!-- modal -->
+
 
 `;
 
