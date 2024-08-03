@@ -41,6 +41,46 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
+    <style>
+         .table-bordered {
+            border: 2px solid #000;
+        }
+        thead tr th:nth-child(1),
+        thead tr th:nth-child(2),
+        thead tr th:nth-child(3){
+            border: 2px solid #5F4302;
+        }
+        .table-bordered th,
+        .table-bordered td {
+            border: 2px solid #CAC1A8;
+        }
+        .table-caption {
+            margin: auto;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            background-color: #727B4E; 
+            color: white;
+            padding: 10px;
+            width: 50%;
+
+        }
+        .table-caption {
+            caption-side: top;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        tbody tr td:nth-child(1),
+        tbody tr td:nth-child(2) {
+            color: #737953;
+        }
+        tbody tr td:nth-child(3) {
+            color: #9A8444;
+        }
+    </style>
     
 </head>
 
@@ -57,15 +97,18 @@
             </div>
         </div>
         <div class="documents-content py-3">
-            <div class="trust-details ">
-                <div res class="container">
-                    <table border="4" align="center" class="table w-50">
-                        <div class="caption text-center fs-1 f-sm-3">TRUST DETAILS</div>
+        <div class="trust-details fs-5">
+            <div class="container">
+                <table class="table table-bordered w-50 mx-auto">
+                    <caption class="table-caption rounded-pill x-theme">TRUST LEGAL DETAILS</caption>
+                    <thead class="thead-dark">
                         <tr>
-                            <th>NO.</th>
-                            <th>CERTIFICATES</th>
-                            <th>NUMBER</th>
+                            <th style="background-color: #D0BE9A;color: #5E4100;">NO.</th>
+                            <th style="background-color: #D0BE9A;color: #5E4100;">CERTIFICATES</th>
+                            <th style="background-color: #D0BE9A;color: #5E4100;">NUMBER</th>
                         </tr>
+                    </thead>
+                    <tbody>
                         <tr>
                             <td>1</td>
                             <td>TRUST REGISTRATION</td>
@@ -101,10 +144,11 @@
                             <td>FCRA</td>
                             <td>042100215</td>
                         </tr>
-                    </table>
-                </div>
+                    </tbody>
+                </table>
             </div>
         </div>
+    </div>
     </section>
     <!-- doctors section end -->
 

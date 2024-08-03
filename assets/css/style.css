@@ -17,8 +17,14 @@
   font-style: normal;
 }
 
-body {
+.x-theme {
   font-family: 'horatio';
+  src: url('../font/Horatio\ D\ Regular.ttf') format('truetype');
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif;
   color: #444444;
 }
 
