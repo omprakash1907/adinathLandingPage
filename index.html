@@ -60,14 +60,16 @@
                                 ${contact.address}
                             </a>
                         </p>
-                        <div class="d-flex align-items-center mt-2">
+                        <div class="mt-2 d-sm-flex">
                             <span class="p-2 rounded fs-4 text-white">M. ${contact.number}</span>
-                            <a href="tel:${contact.number}" class="d-flex align-items-center ms-3">
+                            <div class="d-flex col-12 col-sm-5 ms-sm-3 mt-2 mt-sm-0">
+                                <a href="tel:${contact.number}" class="d-flex align-items-center">
                                 <i class="fa-solid fa-phone fs-4 p-2 rounded text-white" style="background-color: #C9B582;"></i>
-                            </a>
-                            <a href="https://wa.me/${contact.number}?text=Hello%20there!" target="_blank" class="d-flex align-items-center ms-3">
-                                <i class="fa-brands fa-whatsapp fs-4 p-2 rounded text-white" style="background-color: #4AC958;"></i>
-                            </a>
+                                </a>
+                                <a href="https://wa.me/${contact.number}?text=Hello%20there!" target="_blank" class="d-flex align-items-center ms-3">
+                                    <i class="fa-brands fa-whatsapp fs-4 p-2 rounded text-white" style="background-color: #4AC958;"></i>
+                                </a>
+                            </div>
                         </div>
                     `;
                     container.appendChild(contactDiv);
@@ -79,82 +81,10 @@
         window.onload = createWhatsAppLinks;
     </script>
 
-<style>
-    .text-white { color: white; }
-    .fs-4 { font-size: 1.5rem; }
-    .p-2 { padding: 0.5rem; }
-    .rounded { border-radius: 0.25rem; }
-    .mt-2 { margin-top: 0.5rem; }
-    .mt-3 { margin-top: 1rem; }
-    .ms-3 { margin-left: 1rem; }
-    .modal-address { background-color: whitesmoke; padding: 1rem; border-radius: 0.5rem; }
-    .d-flex { display: flex; }
-    .align-items-center { align-items: center; }
-    .modal-content {
-        border-radius: 10px;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        background-color: #fff;
-    }
-    .modal-body {
-        padding: 2rem;
-    }
-    .modal-logo img {
-        max-width: 150px;
-    }
-    .modal-address {
-        margin-top: 1.5rem;
-        text-align: left;
-    }
-    .modal-address h3 {
-        background-color: #C2A467;
-        color: white;
-        padding: 0.5rem 1rem;
-        border-radius: 5px;
-        font-size: 1.25rem;
-        display: inline-block;
-        margin: 0;
-    }
-    .modal-address p {
-        margin: 0.5rem 0;
-        font-size: 1.1rem;
-    }
-    .modal-address p i {
-        color: #C2A467;
-    }
-    .modal-contact {
-        margin-top: 1.5rem;
-        border-top: 2px solid #000;
-        padding-top: 1rem;
-    }
-    .modal-body span {
-        background-color: #6E764D;
-        display: inline-block;
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: white;
-    }
-    .modal-body a {
-        color: inherit;
-        text-decoration: none;
-    }
-    .modal-address p span {
-        display: block;
-        font-weight: bold;
-        margin-top: 0.5rem;
-        color: #737953;
-    }
-    .d-flex.align-items-center .ms-3 {
-        margin-left: 1rem;
-    }
-    /* Ensure no underlines on anchor tags */
-    .modal-address a {
-        text-decoration: none;
-    }
-</style>
-
 </head>
 
 <body>
+
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top shadow-lg">
     </header>
@@ -246,7 +176,6 @@
         </section>
         <!-- End About Us Section -->
 
-<img src="assets/img/photos/WhatsApp Image 2024-07-31 at 22.21.07_9028c5ee.jpg" alt="">
         <!-- ======= Services Section ======= -->
         <section id="services" class="services services section-bg">
             <div class="container" data-aos="fade-up">
@@ -259,11 +188,11 @@
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
+                                    <div class="modal-logo col-12 d-flex justify-content-center bg-logo-theme">
+                                        <img src='/assets/img/service/Aadinath Healthcare Logo1.png' alt=""
+                                            class='img-fluid col-3' />
+                                    </div>
                                     <div class="modal-body text-center">
-                                        <div class="modal-logo col-12 d-flex justify-content-center">
-                                            <img src='/assets/img/service/Aadinath Healthcare Logo1.png' alt=""
-                                                class='img-fluid col-3' />
-                                        </div>
                                         <!-- vesu details in card  -->
                                         <div class="vesu-details"></div>
                                         <!-- kailashnagar details in card  -->
@@ -278,7 +207,7 @@
                             </div>
                             <div class="service-footer d-flex  justify-content-between align-items-center ">
                                 <a href="#appointment" class="appointment-btn scrollto d-lg-block ms-0 "> Read more</a>
-                                <div class="card-button">
+                                <div class="card-button d-sm-flex d-none">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                             </div>
@@ -289,10 +218,10 @@
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
+                                    <div class="modal-logo col-12 d-flex justify-content-center bg-logo-theme">
+                                        <img src="/assets/img/service/Aadinath Medicines Logo.png" alt="" class="img-fluid" />
+                                    </div>
                                     <div class="modal-body text-center">
-                                        <div class="modal-logo col-12 d-flex justify-content-center">
-                                            <img src="/assets/img/service/Aadinath Medicines Logo.png" alt="" class="img-fluid" />
-                                        </div>
                                         <!-- vesu details in card  -->
                                         <div class="vesu-details"></div>
                                         <div class="modal-contact border-top border-3"></div>
@@ -312,7 +241,7 @@
                             </div>
                             <div class="service-footer d-flex  justify-content-between align-items-center ">
                                 <a href="#appointment" class="appointment-btn scrollto d-lg-block ms-0 "> Read more</a>
-                                <div class="card-button">
+                                <div class="card-button d-sm-flex d-none">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                             </div>
@@ -323,11 +252,11 @@
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
+                                    <div class="modal-logo col-12 d-flex justify-content-center bg-logo-theme">
+                                        <img src='/assets/img/service/AADINATH LAB.webp' alt=""
+                                            class='img-fluid col-3' />
+                                    </div>
                                     <div class="modal-body text-center">
-                                        <div class="modal-logo col-12 d-flex justify-content-center">
-                                            <img src='/assets/img/service/AADINATH LAB.webp' alt=""
-                                                class='img-fluid col-3' />
-                                        </div>
                                         
                                         <!-- vesu details in card  -->
                                         <div class="vesu-details"></div>
@@ -353,7 +282,7 @@
                             </div>
                             <div class="service-footer d-flex  justify-content-between align-items-center ">
                                 <a href="#appointment" class="appointment-btn scrollto  d-lg-block ms-0 "> Read more</a>
-                                <div class="card-button">
+                                <div class="card-button d-sm-flex d-none">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                             </div>
@@ -364,11 +293,11 @@
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
+                                    <div class="modal-logo col-12 d-flex justify-content-center bg-logo-theme">
+                                        <img src='/assets/img/service/AADINATH EQUIPMENT.webp' alt=""
+                                            class='img-fluid col-3' />
+                                    </div>
                                     <div class="modal-body text-center">
-                                        <div class="modal-logo col-12 d-flex justify-content-center">
-                                            <img src='/assets/img/service/AADINATH EQUIPMENT.webp' alt=""
-                                                class='img-fluid col-3' />
-                                        </div>
                                          <!-- vesu details in card  -->
                                          <div class="vesu-details"></div>
                                          <div class="modal-contact border-top border-3"></div>
@@ -384,7 +313,7 @@
                             </div>
                             <div class="service-footer d-flex  justify-content-between align-items-center ">
                                 <a href="#appointment" class="appointment-btn scrollto  d-lg-block ms-0 "> Read more</a>
-                                <div class="card-button">
+                                <div class="card-button d-sm-flex d-none">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                             </div>
@@ -395,11 +324,11 @@
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
+                                    <div class="modal-logo col-12 d-flex justify-content-center bg-logo-theme">
+                                        <img src='/assets/img/service/AADINATH SONOGRAPHY.webp' alt=""
+                                            class='img-fluid col-3' />
+                                    </div>
                                     <div class="modal-body text-center">
-                                        <div class="modal-logo col-12 d-flex justify-content-center">
-                                            <img src='/assets/img/service/AADINATH SONOGRAPHY.webp' alt=""
-                                                class='img-fluid col-3' />
-                                        </div>
                                         <!-- vesu details in card  -->
                                         <div class="vesu-details"></div>
                                         <div class="modal-contact border-top border-3"></div>
@@ -415,7 +344,7 @@
                             </div>
                             <div class="service-footer d-flex  justify-content-between align-items-center ">
                                 <a href="#appointment" class="appointment-btn scrollto  d-lg-block ms-0 "> Read more</a>
-                                <div class="card-button">
+                                <div class="card-button d-sm-flex d-none">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                             </div>
@@ -426,11 +355,11 @@
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
+                                    <div class="modal-logo col-12 d-flex justify-content-center bg-logo-theme">
+                                        <img src='/assets/img/service/AADINATH X-RAY.webp' alt=""
+                                            class='img-fluid col-3' />
+                                    </div>
                                     <div class="modal-body text-center">
-                                        <div class="modal-logo col-12 d-flex justify-content-center">
-                                            <img src='/assets/img/service/AADINATH X-RAY.webp' alt=""
-                                                class='img-fluid col-3' />
-                                        </div>
                                         <!-- vesu details in card  -->
                                         <div class="vesu-details"></div>
                                         <div class="modal-contact border-top border-3"></div>
@@ -446,29 +375,39 @@
                             </div>
                             <div class="service-footer d-flex  justify-content-between align-items-center ">
                                 <a href="#appointment" class="appointment-btn scrollto  d-lg-block ms-0 "> Read more</a>
-                                <div class="card-button">
+                                <div class="card-button d-sm-flex d-none">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
-
+<!-- <img src="assets/img/WhatsApp Image 2024-07-31 at 22.27.52_86d7fb7a.jpg" alt=""> -->
                     <div class="col-6 col-sm-6 col-lg-4 col-xl-3 px-2 mb-3">
                         <div class="modal fade" id="mobileclinic" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
-                                    <div class="modal-body ">
-                                        <div class="modal-logo col-12 d-flex justify-content-center">
-                                            <img src='/assets/img/service/AADINATH MOBILE CLINIC.webp' alt=""
-                                                class='img-fluid col-3' />
+                                    <div class="modal-logo col-12 d-flex  justify-content-center bg-logo-theme">
+                                        <img src='/assets/img/service/AADINATH MOBILE CLINIC.webp' alt="" class='img-fluid col-3' />
+                                    </div>
+                                    <div class="modal-body p-2 bg-logo-theme">
+                                     <div class="modal-contact border-top border-3"></div>
+
+                                        <div class="adinath_sponsor text-center">
+                                            <img src="assets/img/service/Ambulance Sponsor.png" alt="" width="80%">
                                         </div>
-                                        <div class="modal-contact fs-3 text-center my-3 border-bottom border-3">
-                                            <span><strong>M.</strong>7825096000</span>
+                                    </div>
+                                    <div class="modal-content-title w-100 d-flex align-items-center justify-content-center " style="background-color: #757E54;">
+                                        <p class="text-white fs-3 mb-0">MOBILE CLINIC FACILITIES</p>
+                                    </div>
+                                    <div class="modal-body p-2">
+                                        <div class="vahical text-center">
+                                            <img class="p-2" src="assets/img/service/Ambulance .png" alt="" width="80%">
                                         </div>
-                                        <div class="modal-cardiac-list mt-3 d-sm-flex ">
+
+                                        <div class="modal-cardiac-list mt-3 d-sm-flex fw-bold" style="font-size: 18px;">
                                             <ul class="mb-0">
-                                                <li class="">
+                                                <li >
                                                     Portable X-RAY
                                                 </li>
                                                 <li>
@@ -526,6 +465,15 @@
                                                 </li>
                                             </ul>
                                         </div>
+
+                                        <div class="mt-2 d-flex justify-content-center">
+                                            <span class="p-2 rounded fs-4 text-white">M. 7825096000</span>
+                                            <div class="d-flex mt-2 mt-sm-0">
+                                                <a href="https://wa.me/7825096000?text=Hello%20there!" target="_blank" class="d-flex align-items-center ms-3">
+                                                    <i class="fa-brands fa-whatsapp fs-4 p-2 rounded text-white" style="background-color: #4AC958;"></i>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -536,7 +484,7 @@
                             </div>
                             <div class="service-footer d-flex  justify-content-between align-items-center ">
                                 <a href="#appointment" class="appointment-btn scrollto  d-lg-block ms-0 "> Read more</a>
-                                <div class="card-button">
+                                <div class="card-button d-sm-flex d-none">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                             </div>
@@ -548,15 +496,22 @@
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
-                                    <div class="modal-body ">
+                                    <div class="modal-body bg-logo-theme" >
                                         <div class="modal-logo col-12 d-flex justify-content-center">
                                             <img src='/assets/img/service/AADINATHCARDIACAMBULANCE.png' alt=""
                                                 class='img-fluid col-3 ' />
                                         </div>
-                                        <div class="modal-contact fs-3 text-center my-3 border-bottom border-3">
-                                            <span><strong>M.</strong>7826096000</span>
+                                     <div class="modal-contact border-top border-3"></div>
+                                        <div class="vahical text-center">
+                                            <img class="p-2" src="assets/img/service/Cardiac.png" alt="" width="80%">
+                                            <p class="fs-4" style="color:#757E54;">માનનીય સંસદસભ્ય <strong style="color:#AD854D;">શ્રી દર્શનાબેન જરદોશ  </strong>ની ગાંસમાંથી ફાળવણી.</p>
                                         </div>
-                                        <div class="modal-cardiac-list mt-3 d-sm-flex ">
+                                    </div>
+                                    <div class="modal-content-title w-100 d-flex align-items-center justify-content-center " style="background-color: #757E54;">
+                                        <p class="text-white fs-3 mb-0">CARDIAC AMBULANCE FACILITIES</p>
+                                    </div>
+                                    <div class="modal-body p-2">
+                                        <div class="modal-cardiac-list mt-3 d-sm-flex fw-bold" style="font-size: 18px;">
                                             <ul class="mb-ms-0">
                                                 <li class="">
                                                     ventilator
@@ -607,6 +562,15 @@
                                                 </li>
                                             </ul>
                                         </div>
+
+                                        <div class="mt-2 d-flex justify-content-center">
+                                            <span class="p-2 rounded fs-4 text-white">M. 7826096000</span>
+                                            <div class="d-flex mt-2 mt-sm-0">
+                                                <a href="https://wa.me/7826096000?text=Hello%20there!" target="_blank" class="d-flex align-items-center ms-3">
+                                                    <i class="fa-brands fa-whatsapp fs-4 p-2 rounded text-white" style="background-color: #4AC958;"></i>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -617,7 +581,7 @@
                             </div>
                             <div class="service-footer d-flex  justify-content-between align-items-center ">
                                 <a href="#appointment" class="appointment-btn scrollto  d-lg-block ms-0 "> Read more</a>
-                                <div class="card-button">
+                                <div class="card-button d-sm-flex d-none">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                             </div>
@@ -629,11 +593,11 @@
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
+                                    <div class="modal-logo col-12 d-flex justify-content-center bg-logo-theme">
+                                        <img src='/assets/img/service/AADINATH-PHYSIOTHERAPY.webp' alt=""
+                                            class='img-fluid col-3' />
+                                    </div>
                                     <div class="modal-body text-center">
-                                        <div class="modal-logo col-12 d-flex justify-content-center">
-                                            <img src='/assets/img/service/AADINATH-PHYSIOTHERAPY.webp' alt=""
-                                                class='img-fluid col-3' />
-                                        </div>
                                         <!-- vesu details in card  -->
                                         <div class="vesu-details"></div>
                                         <div class="modal-contact border-top border-3"></div>
@@ -654,7 +618,7 @@
                             </div>
                             <div class="service-footer d-flex  justify-content-between align-items-center ">
                                 <a href="#appointment" class="appointment-btn scrollto  d-lg-block ms-0 "> Read more</a>
-                                <div class="card-button">
+                                <div class="card-button d-sm-flex d-none">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                             </div>
@@ -666,11 +630,10 @@
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
+                                    <div class="modal-logo col-12 d-flex justify-content-center mb-3 bg-logo-theme">
+                                        <img src='/assets/img/service/AADINATH VAIYAVACHH.webp' alt=" "class='img-fluid col-3' />
+                                    </div>
                                     <div class="modal-body text-center">
-                                        <div class="modal-logo col-12 d-flex justify-content-center mb-3">
-                                            <img src='/assets/img/service/AADINATH VAIYAVACHH.webp' alt=""
-                                                class='img-fluid col-3' />
-                                        </div>
                                         <div class="Modal-vaiyavach-detail">
                                             <div class="external-help-details mb-3">
                                                 <p class="border-3 border-bottom w-100"><strong
@@ -699,7 +662,7 @@
                             </div>
                             <div class="service-footer d-flex  justify-content-between align-items-center ">
                                 <a href="#appointment" class="appointment-btn scrollto d-lg-block ms-0 "> Read more</a>
-                                <div class="card-button">
+                                <div class="card-button d-sm-flex d-none">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                             </div>
