@@ -52,8 +52,27 @@ h6 {
   background: #777D54 !important;
 }
 
+.bg-theme-light {
+  background: #777d5465 !important;
+}
+
 .text-theme{
-  color: rgb(237, 188, 84) !important;
+  color: rgb(164,139,75) !important;
+}
+
+.text-theme-secondary {
+  color: #777D54 !important;
+}
+
+.bg-theme-secondary{
+  background-color: rgb(164,139,75) !important;
+}
+
+.border-bottom-custom{
+  border-bottom: 2px solid  rgb(237, 188, 84) !important;;
+}
+.border-right-custom{
+  border-right: 2px solid  rgb(237, 188, 84) !important;;
 }
 
 /*--------------------------------------------------------------
@@ -1380,85 +1399,19 @@ svg {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-.contact .info-box {
-  color: #444444;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(214, 215, 216, 0.5);
-  padding: 20px 0 30px 0;
-}
-
-.contact .info-box i {
-  font-size: 32px;
-  color: #777D54;
-  border-radius: 50%;
-  padding: 8px;
-  border: 2px dotted #c5ebec;
-}
-
-.contact .info-box h3 {
-  font-size: 20px;
-  color: #777777;
-  font-weight: 700;
-  margin: 10px 0;
-}
-
-.contact .info-box p {
-  padding: 0;
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.contact .php-email-form {
-  box-shadow: 0 0 20px rgba(214, 215, 216, 0.5);
-  padding: 30px;
-}
-
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-.contact .php-email-form input {
-  padding: 10px 15px;
-}
-
-.contact .php-email-form textarea {
-  padding: 12px 15px;
-}
-
-
-
-.contact .php-email-form button[type=submit] {
+.social-links a {
+  font-size: 18px;
+  display: inline-block;
   background: #777D54;
-  border: 0;
-  padding: 10px 30px;
   color: #fff;
-  transition: 0.4s;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 10px;
   border-radius: 4px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: black;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
 }
 
 @keyframes animate-loading {
@@ -1504,20 +1457,7 @@ svg {
   font-family: "Roboto", sans-serif;
 }
 
-#footer .footer-top .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: #777D54;
-  color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 10px;
-  border-radius: 4px;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-}
+
 
 
 
