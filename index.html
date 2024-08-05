@@ -31,9 +31,61 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
+    <script>
+        // Array of contacts with names, phone numbers, addresses, map links, and modal IDs
+        const contacts = [
+            { name: 'VESU', number: '7435996000', address: 'MAHAVIDEH DHAM, 3rd Floor, Maharana Pratap Road, Vesu, SURAT.', mapLink: 'https://maps.app.goo.gl/doL47s44S25tsEUw6', modalClass: 'vesu-details' },
+            { name: 'Kailashnagar', number: '8347196000', address: 'F-04, Shankheshwar Complex, Kailash Nagar, Surat(Opposite Raymond Show Room, Majura Gate).', mapLink: 'https://maps.app.goo.gl/Nzm2hS3P9mheB7766', modalClass: 'kailashnagar-details-F4' },
+            { name: 'Kailashnagar', number: '8347196000', address: 'F-06, Shankheshwar Complex, Kailash Nagar, Surat(Opposite Raymond Show Room, Majura Gate).', mapLink: 'https://maps.app.goo.gl/Nzm2hS3P9mheB7766', modalClass: 'kailashnagar-details-F6' },
+            { name: 'Kailashnagar', number: '7434096000', address: 'F-06, Shankheshwar Complex, Kailash Nagar, Surat(Opposite Raymond Show Room, Majura Gate).', mapLink: 'https://maps.app.goo.gl/Nzm2hS3P9mheB7766', modalClass: 'kailashnagar-details-Equipment' },
+            { name: 'Kailashnagar', number: '8347496000', address: 'F-06, Shankheshwar Complex, Kailash Nagar, Surat(Opposite Raymond Show Room, Majura Gate).', mapLink: 'https://maps.app.goo.gl/Nzm2hS3P9mheB7766', modalClass: 'kailashnagar-details-Xray-Sono' },
+            { name: 'Pal', number: '9586069600', address: 'Shop No. 5, Western Arena, B/s. Western BusinessHub, L.P. Sawani Road, Pal, Surat.', mapLink: 'https://maps.app.goo.gl/navz4yMP2hbVF4y8A', modalClass: 'pal-details' },
+            { name: 'ADAJAN', number: '7435019600', address: 'Shop No. 29, KUNTI SHOPPING CENTER, Above Sai Xerox, Deepa Comp., Adajan, Surat.', mapLink: 'https://maps.app.goo.gl/YRqS1U5j62rhp8Xk6', modalClass: 'adajan-details' },
+            { name: 'KATARGAM', number: '8109609600', address: 'PARESH APART, Nr. Nitisuri Aaradhna Bhavan, Katargam, Surat', mapLink: 'https://maps.app.goo.gl/gdWEoqJGkYUJnkd18c', modalClass: 'katargam-details' },
+            // Add more contacts here
+        ];
+
+        // Function to create WhatsApp links
+        function createWhatsAppLinks() {
+            contacts.forEach(contact => {
+                const containers = document.querySelectorAll(`.${contact.modalClass}`);
+                containers.forEach(container => {
+                    const contactDiv = document.createElement('div');
+                    contactDiv.className = 'modal-address mt-3';
+                    contactDiv.innerHTML = `
+                        <h3 class="text-white">${contact.name}</h3>
+                        <p class="fs-4 mb-0">
+                            <a href="${contact.mapLink}" target="_blank">
+                                <i class="fa-solid fa-location-dot"></i>
+                                ${contact.address}
+                            </a>
+                        </p>
+                        <div class="mt-2 d-sm-flex">
+                            <span class="p-2 rounded fs-4 text-white">M. ${contact.number}</span>
+                            <div class="d-flex col-12 col-sm-5 ms-sm-3 mt-2 mt-sm-0">
+                                <a href="tel:${contact.number}" class="d-flex align-items-center">
+                                <i class="fa-solid fa-phone fs-4 p-2 rounded text-white" style="background-color: #C9B582;"></i>
+                                </a>
+                                <a href="https://wa.me/${contact.number}?text=Hello%20there!" target="_blank" class="d-flex align-items-center ms-3">
+                                    <i class="fa-brands fa-whatsapp fs-4 p-2 rounded text-white" style="background-color: #4AC958;"></i>
+                                </a>
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(contactDiv);
+                });
+            });
+        }
+
+        // Call the function on page load
+        window.onload = createWhatsAppLinks;
+    </script>
+
+
 </head>
 
 <body>
+
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top shadow-lg">
     </header>
@@ -125,7 +177,6 @@
         </section>
         <!-- End About Us Section -->
 
-
         <!-- ======= Services Section ======= -->
         <section id="services" class="services services section-bg">
             <div class="container" data-aos="fade-up">
@@ -138,34 +189,15 @@
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
+                                    <div class="modal-logo col-12 d-flex justify-content-center bg-logo-theme">
+                                        <img src='/assets/img/service/Aadinath Healthcare Logo1.png' alt=""
+                                            class='img-fluid col-3' />
+                                    </div>
                                     <div class="modal-body text-center">
-                                        <div class="modal-logo col-12 d-flex justify-content-center">
-                                            <img src='/assets/img/service/Aadinath Healthcare Logo1.png' alt=""
-                                                class='img-fluid col-3' />
-                                        </div>
-                                        <div class="modal-address mt-3">
-                                            <h3 class="btn bg-theme text-white"> <strong class="mx-1"><a
-                                                        href="https://maps.app.goo.gl/tA7yPjJjE4XgWgrf9"
-                                                        target="_blank"><i
-                                                            class="fa-solid fa-location-dot text-white"></i></a></strong>Kailashnagar
-                                            </h3>
-                                            <p class="fs-4 mb-0"> F-04,
-                                                Basement, Shankeshwar Complex, Below Adinath Madicine, Kailashnagar,
-                                                Majuragate, Surat-2</p>
-                                        </div>
-                                        <div class="modal-address mt-3">
-                                            <h3 class="btn bg-theme text-white"> <strong class="mx-1"><a
-                                                        href="https://maps.app.goo.gl/hfWCU9nYZEwB83Tv5"
-                                                        target="_blank"><i
-                                                            class="fa-solid fa-location-dot text-white"></i></a></strong>Vesu
-                                            </h3>
-                                            <p class="fs-4 mb-0">3rd Floor Mahavideh Dham, Maharana Pratap Rd, Vesu,
-                                                Surat</p>
-                                        </div>
-                                        <div class="modal-contact fs-3 border-top border-3">
-                                            <span><strong>PH.:</strong>0261-2460960</span>
-                                            <span><strong>M.</strong>8347496000</span>
-                                        </div>
+                                        <!-- vesu details in card  -->
+                                        <div class="vesu-details"></div>
+                                        <!-- kailashnagar details in card  -->
+                                        <div class="kailashnagar-details-F6"></div>
                                     </div>
                                 </div>
                             </div>
@@ -176,7 +208,7 @@
                             </div>
                             <div class="service-footer d-flex  justify-content-between align-items-center ">
                                 <a href="#appointment" class="appointment-btn scrollto d-lg-block ms-0 "> Read more</a>
-                                <div class="card-button">
+                                <div class="card-button d-sm-flex d-none">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                             </div>
@@ -187,48 +219,18 @@
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
+                                    <div class="modal-logo col-12 d-flex justify-content-center bg-logo-theme">
+                                        <img src="/assets/img/service/Aadinath Medicines Logo.png" alt="" class="img-fluid" />
+                                    </div>
                                     <div class="modal-body text-center">
-                                        <div class="modal-logo col-12 d-flex justify-content-center">
-                                            <img src='/assets/img/service/Aadinath Medicines Logo.png' alt=""
-                                                class='img-fluid col-3' />
-                                        </div>
-                                        <div class="modal-address mt-3">
-                                            <h3 class="btn bg-theme text-white"> <strong class="mx-1"><a
-                                                        href="https://maps.app.goo.gl/tA7yPjJjE4XgWgrf9"
-                                                        target="_blank"><i
-                                                            class="fa-solid fa-location-dot text-white"></i></a></strong>Kailashnagar
-                                            </h3>
-                                            <p class="fs-4 mb-0"> F-04,
-                                                Basement, Shankeshwar Complex, Below Adinath Madicine, Kailashnagar,
-                                                Majuragate, Surat-2</p>
-                                        </div>
-                                        <span class="py-3 fs-3"><strong>M.</strong>7436096000</span>
-                                        <div class="modal-contact  border-top border-3">
-                                        </div>
-                                        <div class="modal-address mt-3">
-                                            <h3 class="btn bg-theme text-white"> <strong class="mx-1"><a
-                                                        href="https://maps.app.goo.gl/navz4yMP2hbVF4y8A"
-                                                        target="_blank"><i
-                                                            class="fa-solid fa-location-dot text-white"></i></a></strong>Pal
-                                            </h3>
-                                            <p class="fs-4 mb-0"> Shop No.
-                                                5, Western Arena, opp. Siddh Sangini Apartment, Adajan Gam, Pal Gam,
-                                                Surat</p>
-                                        </div>
-                                        <span class="py-3 fs-3"><strong>M.</strong>8238696000</span>
-                                        <div class="modal-contact  border-top border-3">
-                                        </div>
-                                        <div class="modal-address mt-3">
-                                            <h3 class="btn bg-theme text-white"> <strong class="mx-1"><a
-                                                        href="https://maps.app.goo.gl/hfWCU9nYZEwB83Tv5"
-                                                        target="_blank"><i
-                                                            class="fa-solid fa-location-dot text-white"></i></a></strong>Vesu
-                                            </h3>
-                                            <p class="fs-4 mb-0">Grd.
-                                                floor, Mahavideh Dham, Maharana Pratap Rd, Vesu, Surat</p>
-                                        </div>
-                                        <span class="py-3 fs-3"><strong>M.</strong>8347496000</span>
-
+                                        <!-- vesu details in card  -->
+                                        <div class="vesu-details"></div>
+                                        <div class="modal-contact border-top border-3"></div>
+                                        <!-- kailashnagar details in card  -->
+                                        <div class="kailashnagar-details-F4"></div>
+                                        <div class="modal-contact border-top border-3"></div>
+                                        <!-- pal details in card  -->
+                                        <div class="pal-details"></div>
                                     </div>
                                 </div>
                             </div>
@@ -240,7 +242,7 @@
                             </div>
                             <div class="service-footer d-flex  justify-content-between align-items-center ">
                                 <a href="#appointment" class="appointment-btn scrollto d-lg-block ms-0 "> Read more</a>
-                                <div class="card-button">
+                                <div class="card-button d-sm-flex d-none">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                             </div>
@@ -251,69 +253,26 @@
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
+                                    <div class="modal-logo col-12 d-flex justify-content-center bg-logo-theme">
+                                        <img src='/assets/img/service/AADINATH LAB.webp' alt=""
+                                            class='img-fluid col-3' />
+                                    </div>
                                     <div class="modal-body text-center">
-                                        <div class="modal-logo col-12 d-flex justify-content-center">
-                                            <img src='/assets/img/service/AADINATH LAB.webp' alt=""
-                                                class='img-fluid col-3' />
-                                        </div>
-                                        <div class="modal-address mt-3">
-                                            <h3 class="btn bg-theme text-white"> <strong class="mx-1"><a
-                                                        href="https://maps.app.goo.gl/tA7yPjJjE4XgWgrf9"
-                                                        target="_blank"><i
-                                                            class="fa-solid fa-location-dot text-white"></i></a></strong>Main
-                                                LAb Kailashnagar</h3>
-                                            <p class="fs-4 mb-0"> F-04,
-                                                Basement, Shankeshwar Complex, Below Adinath Madicine, Kailashnagar,
-                                                Majuragate, Surat-2</p>
-                                        </div>
-                                        <span class="py-3 fs-3"><strong>M.</strong>8347496000</span>
-                                        <div class="modal-contact  border-top border-3">
-                                        </div>
-                                        <div class="modal-address mt-3">
-                                            <h3 class="btn bg-theme text-white"> <strong class="mx-1"><a
-                                                        href="https://maps.app.goo.gl/i9XkX4cC3XGXE3Lk6"
-                                                        target="_blank"><i
-                                                            class="fa-solid fa-location-dot text-white"></i></a></strong>Pal
-                                            </h3>
-                                            <p class="fs-4 mb-0"> Shop No. 4, Siddhanchal Avenue, Nr. Paratham Circle,
-                                                Pal Surat</p>
-                                        </div>
-                                        <span class="py-3 fs-3"><strong>M.</strong>9586069600</span>
-                                        <div class="modal-contact  border-top border-3">
-                                        </div>
-                                        <div class="modal-address mt-3">
-                                            <h3 class="btn bg-theme text-white"> <strong class="mx-1"><a
-                                                        href="https://maps.app.goo.gl/QgKmDoMBDAZiKQKZ9"
-                                                        target="_blank"><i
-                                                            class="fa-solid fa-location-dot text-white"></i></a></strong>Katargam
-                                            </h3>
-                                            <p class="fs-4 mb-0"> Paresh Apartment, Nr. Nitisuri Aaradhna Bhavan,
-                                                Katargam, Surat</p>
-                                        </div>
-                                        <span class="py-3 fs-3"><strong>M.</strong>8109609600</span>
-                                        <div class="modal-contact  border-top border-3">
-                                        </div>
-                                        <div class="modal-address mt-3">
-                                            <h3 class="btn bg-theme text-white"> <strong class="mx-1"><a
-                                                        href="https://maps.app.goo.gl/hfWCU9nYZEwB83Tv5"
-                                                        target="_blank"><i
-                                                            class="fa-solid fa-location-dot text-white"></i></a></strong>Vesu
-                                            </h3>
-                                            <p class="fs-4 mb-0"> Mahavideh Dham, Maharana Pratap Rd, Vesu, Surat</p>
-                                        </div>
-                                        <span class="py-3 fs-3"><strong>M.</strong>9586089600</span>
-                                        <div class="modal-contact  border-top border-3">
-                                        </div>
-                                        <div class="modal-address mt-3">
-                                            <h3 class="btn bg-theme text-white"> <strong class="mx-1"><a
-                                                        href="https://maps.app.goo.gl/YRqS1U5j62rhp8Xk6"
-                                                        target="_blank"><i
-                                                            class="fa-solid fa-location-dot text-white"></i></a></strong>Adajan
-                                            </h3>
-                                            <p class="fs-4 mb-0">Shop No. 29 Kunti Shopping Center Above Sai Xerox ,
-                                                Deepa Complex, Adajan, Surat</p>
-                                        </div>
-                                        <span class="py-3 fs-3"><strong>M.</strong>7435019600</span>
+                                        
+                                        <!-- vesu details in card  -->
+                                        <div class="vesu-details"></div>
+                                        <div class="modal-contact border-top border-3"></div>
+                                        <!-- kailashnagar details in card  -->
+                                        <div class="kailashnagar-details-F6"></div>
+                                        <div class="modal-contact border-top border-3"></div>
+                                        <!-- pal details in card  -->
+                                        <div class="pal-details"></div>
+                                        <div class="modal-contact border-top border-3"></div>
+                                        <!-- pal details in card  -->
+                                        <div class="katargam-details"></div> 
+                                        <div class="modal-contact border-top border-3"></div>
+                                        <!-- pal details in card  -->
+                                        <div class="adajan-details"></div>
                                     </div>
                                 </div>
                             </div>
@@ -324,7 +283,7 @@
                             </div>
                             <div class="service-footer d-flex  justify-content-between align-items-center ">
                                 <a href="#appointment" class="appointment-btn scrollto  d-lg-block ms-0 "> Read more</a>
-                                <div class="card-button">
+                                <div class="card-button d-sm-flex d-none">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                             </div>
@@ -335,34 +294,16 @@
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
+                                    <div class="modal-logo col-12 d-flex justify-content-center bg-logo-theme">
+                                        <img src='/assets/img/service/AADINATH EQUIPMENT.webp' alt=""
+                                            class='img-fluid col-3' />
+                                    </div>
                                     <div class="modal-body text-center">
-                                        <div class="modal-logo col-12 d-flex justify-content-center">
-                                            <img src='/assets/img/service/AADINATH EQUIPMENT.webp' alt=""
-                                                class='img-fluid col-3' />
-                                        </div>
-                                        <div class="modal-address mt-3">
-                                            <h3 class="btn bg-theme text-white"> <strong class="mx-1"><a
-                                                        href="https://maps.app.goo.gl/tA7yPjJjE4XgWgrf9"
-                                                        target="_blank"><i
-                                                            class="fa-solid fa-location-dot text-white"></i></a></strong>Kailashnagar
-                                            </h3>
-                                            <p class="fs-4"> F-06,
-                                                Basement, Shankeshwar Complex, Below Adinath Madicine, Kailashnagar,
-                                                Majuragate, Surat-2</p>
-                                        </div>
-                                        <div class="modal-contact fs-3 border-top border-3">
-                                        </div>
-                                        <div class="modal-address mt-3">
-                                            <h3 class="btn bg-theme text-white"> <strong class="mx-1"><a
-                                                        href="https://maps.app.goo.gl/hfWCU9nYZEwB83Tv5"
-                                                        target="_blank"><i
-                                                            class="fa-solid fa-location-dot text-white"></i></a></strong>Vesu
-                                            </h3>
-                                            <p class="fs-4 mb-0"> Mahavideh Dham, Maharana Pratap Rd, Vesu, Surat</p>
-                                        </div>
-                                        <div class="modal-contact fs-3 border-top border-3 ">
-                                            <span><strong>M.</strong>7434096000</span>
-                                        </div>
+                                         <!-- vesu details in card  -->
+                                         <div class="vesu-details"></div>
+                                         <div class="modal-contact border-top border-3"></div>
+                                         <!-- kailashnagar details in card  -->
+                                         <div class="kailashnagar-details-Equipment"></div>
                                     </div>
                                 </div>
                             </div>
@@ -373,7 +314,7 @@
                             </div>
                             <div class="service-footer d-flex  justify-content-between align-items-center ">
                                 <a href="#appointment" class="appointment-btn scrollto  d-lg-block ms-0 "> Read more</a>
-                                <div class="card-button">
+                                <div class="card-button d-sm-flex d-none">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                             </div>
@@ -384,35 +325,16 @@
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
+                                    <div class="modal-logo col-12 d-flex justify-content-center bg-logo-theme">
+                                        <img src='/assets/img/service/AADINATH SONOGRAPHY.webp' alt=""
+                                            class='img-fluid col-3' />
+                                    </div>
                                     <div class="modal-body text-center">
-                                        <div class="modal-logo col-12 d-flex justify-content-center">
-                                            <img src='/assets/img/service/AADINATH SONOGRAPHY.webp' alt=""
-                                                class='img-fluid col-3' />
-                                        </div>
-                                        <div class="modal-address mt-3">
-                                            <h3 class="btn bg-theme text-white"> <strong class="mx-1"><a
-                                                        href="https://maps.app.goo.gl/tA7yPjJjE4XgWgrf9"
-                                                        target="_blank"><i
-                                                            class="fa-solid fa-location-dot text-white"></i></a></strong>Kailashnagar
-                                            </h3>
-                                            <p class="fs-4"> F-06,
-                                                Basement, Shankeshwar Complex, Below Adinath Madicine, Kailashnagar,
-                                                Majuragate, Surat-2</p>
-                                        </div>
-                                        <div class="modal-contact fs-3 border-top border-3">
-                                        </div>
-                                        <div class="modal-address mt-3">
-                                            <h3 class="btn bg-theme text-white"> <strong class="mx-1"><a
-                                                        href="https://maps.app.goo.gl/hfWCU9nYZEwB83Tv5"
-                                                        target="_blank"><i
-                                                            class="fa-solid fa-location-dot text-white"></i></a></strong>Vesu
-                                            </h3>
-                                            <p class="fs-4 mb-0"> Mahavideh Dham, Maharana Pratap Rd, Vesu, Surat</p>
-                                        </div>
-                                        <div class="modal-contact fs-3 border-top border-3 ">
-                                            <span><strong>PH.:</strong>0261-2460960</span>
-                                            <span><strong>M.</strong>8347496000</span>
-                                        </div>
+                                        <!-- vesu details in card  -->
+                                        <div class="vesu-details"></div>
+                                        <div class="modal-contact border-top border-3"></div>
+                                        <!-- kailashnagar details in card  -->
+                                        <div class="kailashnagar-details-Xray-Sono"></div>
                                     </div>
                                 </div>
                             </div>
@@ -423,7 +345,7 @@
                             </div>
                             <div class="service-footer d-flex  justify-content-between align-items-center ">
                                 <a href="#appointment" class="appointment-btn scrollto  d-lg-block ms-0 "> Read more</a>
-                                <div class="card-button">
+                                <div class="card-button d-sm-flex d-none">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                             </div>
@@ -434,35 +356,16 @@
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
+                                    <div class="modal-logo col-12 d-flex justify-content-center bg-logo-theme">
+                                        <img src='/assets/img/service/AADINATH X-RAY.webp' alt=""
+                                            class='img-fluid col-3' />
+                                    </div>
                                     <div class="modal-body text-center">
-                                        <div class="modal-logo col-12 d-flex justify-content-center">
-                                            <img src='/assets/img/service/AADINATH X-RAY.webp' alt=""
-                                                class='img-fluid col-3' />
-                                        </div>
-                                        <div class="modal-address mt-3">
-                                            <h3 class="btn bg-theme text-white"> <strong class="mx-1"><a
-                                                        href="https://maps.app.goo.gl/tA7yPjJjE4XgWgrf9"
-                                                        target="_blank"><i
-                                                            class="fa-solid fa-location-dot text-white"></i></a></strong>Kailashnagar
-                                            </h3>
-                                            <p class="fs-4"> F-06,
-                                                Basement, Shankeshwar Complex, Below Adinath Madicine, Kailashnagar,
-                                                Majuragate, Surat-2</p>
-                                        </div>
-                                        <div class="modal-contact fs-3 border-top border-3">
-                                        </div>
-                                        <div class="modal-address mt-3">
-                                            <h3 class="btn bg-theme text-white"> <strong class="mx-1"><a
-                                                        href="https://maps.app.goo.gl/hfWCU9nYZEwB83Tv5"
-                                                        target="_blank"><i
-                                                            class="fa-solid fa-location-dot text-white"></i></a></strong>Vesu
-                                            </h3>
-                                            <p class="fs-4 mb-0"> Mahavideh Dham, Maharana Pratap Rd, Vesu, Surat</p>
-                                        </div>
-                                        <div class="modal-contact fs-3 border-top border-3 ">
-                                            <span><strong>PH.:</strong>02612460960</span>
-                                            <span><strong>M.</strong>8347496000</span>
-                                        </div>
+                                        <!-- vesu details in card  -->
+                                        <div class="vesu-details"></div>
+                                        <div class="modal-contact border-top border-3"></div>
+                                        <!-- kailashnagar details in card  -->
+                                        <div class="kailashnagar-details-Xray-Sono"></div>
                                     </div>
                                 </div>
                             </div>
@@ -473,29 +376,39 @@
                             </div>
                             <div class="service-footer d-flex  justify-content-between align-items-center ">
                                 <a href="#appointment" class="appointment-btn scrollto  d-lg-block ms-0 "> Read more</a>
-                                <div class="card-button">
+                                <div class="card-button d-sm-flex d-none">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                             </div>
                         </div>
                     </div>
-
+<!-- <img src="assets/img/WhatsApp Image 2024-07-31 at 22.27.52_86d7fb7a.jpg" alt=""> -->
                     <div class="col-6 col-sm-6 col-lg-4 col-xl-3 px-2 mb-3">
                         <div class="modal fade" id="mobileclinic" tabindex="-1" aria-labelledby="exampleModalLabel"
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
-                                    <div class="modal-body ">
-                                        <div class="modal-logo col-12 d-flex justify-content-center">
-                                            <img src='/assets/img/service/AADINATH MOBILE CLINIC.webp' alt=""
-                                                class='img-fluid col-3' />
+                                    <div class="modal-logo col-12 d-flex  justify-content-center bg-logo-theme">
+                                        <img src='/assets/img/service/AADINATH MOBILE CLINIC.webp' alt="" class='img-fluid col-3' />
+                                    </div>
+                                    <div class="modal-body p-2 bg-logo-theme">
+                                     <div class="modal-contact border-top border-3"></div>
+
+                                        <div class="adinath_sponsor text-center">
+                                            <img src="assets/img/service/Ambulance Sponsor.png" alt="" width="80%">
                                         </div>
-                                        <div class="modal-contact fs-3 text-center my-3 border-bottom border-3">
-                                            <span><strong>M.</strong>7825096000</span>
+                                    </div>
+                                    <div class="modal-content-title w-100 d-flex align-items-center justify-content-center " style="background-color: #757E54;">
+                                        <p class="text-white fs-3 mb-0">MOBILE CLINIC FACILITIES</p>
+                                    </div>
+                                    <div class="modal-body p-2">
+                                        <div class="vahical text-center">
+                                            <img class="p-2" src="assets/img/service/Ambulance .png" alt="" width="80%">
                                         </div>
-                                        <div class="modal-cardiac-list mt-3 d-sm-flex ">
+
+                                        <div class="modal-cardiac-list mt-3 d-sm-flex fw-bold" style="font-size: 18px;">
                                             <ul class="mb-0">
-                                                <li class="">
+                                                <li >
                                                     Portable X-RAY
                                                 </li>
                                                 <li>
@@ -553,6 +466,15 @@
                                                 </li>
                                             </ul>
                                         </div>
+
+                                        <div class="mt-2 d-flex justify-content-center">
+                                            <span class="p-2 rounded fs-4 text-white">M. 7825096000</span>
+                                            <div class="d-flex mt-2 mt-sm-0">
+                                                <a href="https://wa.me/7825096000?text=Hello%20there!" target="_blank" class="d-flex align-items-center ms-3">
+                                                    <i class="fa-brands fa-whatsapp fs-4 p-2 rounded text-white" style="background-color: #4AC958;"></i>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -563,7 +485,7 @@
                             </div>
                             <div class="service-footer d-flex  justify-content-between align-items-center ">
                                 <a href="#appointment" class="appointment-btn scrollto  d-lg-block ms-0 "> Read more</a>
-                                <div class="card-button">
+                                <div class="card-button d-sm-flex d-none">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                             </div>
@@ -575,15 +497,22 @@
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
-                                    <div class="modal-body ">
+                                    <div class="modal-body bg-logo-theme" >
                                         <div class="modal-logo col-12 d-flex justify-content-center">
-                                            <img src='/assets/img/service/AADINATHCARDIACAMBULANCE.png' alt=""
+                                            <img src='/assets/img/service/AADINATH CARDIAC AMBULANCE.png' alt=""
                                                 class='img-fluid col-3 ' />
                                         </div>
-                                        <div class="modal-contact fs-3 text-center my-3 border-bottom border-3">
-                                            <span><strong>M.</strong>7826096000</span>
+                                     <div class="modal-contact border-top border-3"></div>
+                                        <div class="vahical text-center">
+                                            <img class="p-2" src="assets/img/service/Cardiac.png" alt="" width="80%">
+                                            <p class="fs-4" style="color:#757E54;">માનનીય સંસદસભ્ય <strong style="color:#AD854D;">શ્રી દર્શનાબેન જરદોશ  </strong>ની ગાંસમાંથી ફાળવણી.</p>
                                         </div>
-                                        <div class="modal-cardiac-list mt-3 d-sm-flex ">
+                                    </div>
+                                    <div class="modal-content-title w-100 d-flex align-items-center justify-content-center " style="background-color: #757E54;">
+                                        <p class="text-white fs-3 mb-0">CARDIAC AMBULANCE FACILITIES</p>
+                                    </div>
+                                    <div class="modal-body p-2">
+                                        <div class="modal-cardiac-list mt-3 d-sm-flex fw-bold" style="font-size: 18px;">
                                             <ul class="mb-ms-0">
                                                 <li class="">
                                                     ventilator
@@ -634,6 +563,15 @@
                                                 </li>
                                             </ul>
                                         </div>
+
+                                        <div class="mt-2 d-flex justify-content-center">
+                                            <span class="p-2 rounded fs-4 text-white">M. 7826096000</span>
+                                            <div class="d-flex mt-2 mt-sm-0">
+                                                <a href="https://wa.me/7826096000?text=Hello%20there!" target="_blank" class="d-flex align-items-center ms-3">
+                                                    <i class="fa-brands fa-whatsapp fs-4 p-2 rounded text-white" style="background-color: #4AC958;"></i>
+                                                </a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -644,7 +582,7 @@
                             </div>
                             <div class="service-footer d-flex  justify-content-between align-items-center ">
                                 <a href="#appointment" class="appointment-btn scrollto  d-lg-block ms-0 "> Read more</a>
-                                <div class="card-button">
+                                <div class="card-button d-sm-flex d-none">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                             </div>
@@ -656,37 +594,16 @@
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
+                                    <div class="modal-logo col-12 d-flex justify-content-center bg-logo-theme">
+                                        <img src='/assets/img/service/AADINATH-PHYSIOTHERAPY.webp' alt=""
+                                            class='img-fluid col-3' />
+                                    </div>
                                     <div class="modal-body text-center">
-                                        <div class="modal-logo col-12 d-flex justify-content-center">
-                                            <img src='/assets/img/service/AADINATH-PHYSIOTHERAPY.webp' alt=""
-                                                class='img-fluid col-3' />
-                                        </div>
-
-                                        <div class="modal-address mt-3">
-                                            <h3 class="btn bg-theme text-white"> <strong class="mx-1"><a
-                                                        href="https://maps.app.goo.gl/tA7yPjJjE4XgWgrf9"
-                                                        target="_blank"><i
-                                                            class="fa-solid fa-location-dot text-white"></i></a></strong>Kailashnagar
-                                            </h3>
-                                            <p class="fs-4"> F-06,
-                                                Basement, Shankeshwar Complex, Below Adinath Madicine, Kailashnagar,
-                                                Majuragate, Surat-2</p>
-                                        </div>
-                                        <div class="modal-contact fs-3 border-top border-3">
-                                        </div>
-                                        <div class="modal-address mt-3">
-                                            <h3 class="btn bg-theme text-white"> <strong class="mx-1"><a
-                                                        href="https://maps.app.goo.gl/hfWCU9nYZEwB83Tv5"
-                                                        target="_blank"><i
-                                                            class="fa-solid fa-location-dot text-white"></i></a></strong>Vesu
-                                            </h3>
-                                            <p class="fs-4 mb-0"> Mahavideh Dham, Maharana Pratap Rd, Vesu, Surat</p>
-                                        </div>
-
-                                        <div class="modal-contact fs-3 border-top border-3">
-                                            <span><strong>PH.:</strong>0261-2460960</span>
-                                            <span><strong>M.</strong>8347496000</span>
-                                        </div>
+                                        <!-- vesu details in card  -->
+                                        <div class="vesu-details"></div>
+                                        <div class="modal-contact border-top border-3"></div>
+                                        <!-- kailashnagar details in card  -->
+                                        <div class="kailashnagar-details-Xray-Sono"></div>
                                     </div>
                                 </div>
                             </div>
@@ -697,7 +614,7 @@
                             </div>
                             <div class="service-footer d-flex  justify-content-between align-items-center ">
                                 <a href="#appointment" class="appointment-btn scrollto  d-lg-block ms-0 "> Read more</a>
-                                <div class="card-button">
+                                <div class="card-button d-sm-flex d-none">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                             </div>
@@ -709,30 +626,23 @@
                             aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
+                                    <div class="modal-logo col-12 d-flex justify-content-center bg-logo-theme">
+                                        <img src='/assets/img/service/AADINATH VAIYAVACHH.webp' alt=" "class='img-fluid col-3' />
+                                    </div>
+                                    <p class="header-date fs-4 text-white text-center" style="background-color: #757E54;"><strong class="mx-2">Dt.</strong>7-3-2016 <strong class="mx-2">To</strong>31-01-2024</p>
                                     <div class="modal-body text-center">
-                                        <div class="modal-logo col-12 d-flex justify-content-center mb-3">
-                                            <img src='/assets/img/service/AADINATH VAIYAVACHH.webp' alt=""
-                                                class='img-fluid col-3' />
-                                        </div>
                                         <div class="Modal-vaiyavach-detail">
                                             <div class="external-help-details mb-3">
-                                                <p class="border-3 border-bottom w-100"><strong
-                                                        class="mx-2">DT.</strong>1-4-2020 <strong
-                                                        class="mx-2">TO</strong>31-07-2023</p>
-                                                <p class="fs-5">Total Amount of Vaiyavachh Sadhu-Sadhviji by External
-                                                    Agencies</p>
-                                                <span class="text-danger border-bottom border-5 ">₹18,17,526/-</span>
-                                            </div>
-                                            <div class="trust-help-details mb-2">
-                                                <p class="border-3 border-bottom w-100"><strong
-                                                        class="mx-2">DT.</strong>1-4-2020 <strong
-                                                        class="mx-2">TO</strong>31-07-2023</p>
-                                                <p class="fs-5">Total Amount of Vaiyavachh Sadhu-Sadhviji by Our Trust
-                                                </p>
-                                                <span class="text-danger border-bottom border-5">₹1,58,78,654/-</span>
+                                                <p class="description fs-3 lh-lg " style="color: #757E54;">અમારી સંસ્થા સિવાય વૈયાવચ્ય ક્ષેત્રમાં પૂ. સાધુ-સાધ્વીજી ભગવંતોનો મળેલ લાભ</p>
+                                                <span class="amount fs-3 fw-bold" style="background-color: white;color:#AD854D">₹21,41,514/-</span>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="trust-help-details mb-2 text-center">
+                                        <p class="description fs-3 text-white  p-2" style="background-color: #AD854D;">વૈયાવચ્ય ક્ષેત્રમાં કુલ મળેલ લાભ</p>
+                                        <span class="amount  fs-3 fw-bold" style="background-color: white;color:#757E54">₹2,16,36,598/-</span>
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -742,7 +652,7 @@
                             </div>
                             <div class="service-footer d-flex  justify-content-between align-items-center ">
                                 <a href="#appointment" class="appointment-btn scrollto d-lg-block ms-0 "> Read more</a>
-                                <div class="card-button">
+                                <div class="card-button d-sm-flex d-none">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </div>
                             </div>
@@ -953,6 +863,10 @@
     <script src="assets/js/main.js"></script>
     <!-- header.js  -->
     <script src="assets/js/header.js"></script>
-</body>
 
+
+ 
+
+
+</body>
 </html>

@@ -2,8 +2,10 @@ let header = document.getElementById("header");
 
 let element = `
 <div class="container d-flex align-items-center">
-    <a href="index.html" class="logo me-auto"><img src="assets/img/logos/Trust Name (Website).webp" alt=""
-            class="img-fluid" style="padding: 5px;"></a>
+    <a href="index.html" class="logo me-auto">
+    <img src="assets/img/logos/Trust Name (Website).webp" alt=""
+            class="img-fluid" style="padding: 5px;">
+    </a>
 
     <nav id="navbar" class="navbar order-last order-lg-0">
         <ul class="d-none d-lg-flex">
