@@ -31,55 +31,7 @@
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet">
 
-    <script>
-        // Array of contacts with names, phone numbers, addresses, map links, and modal IDs
-        const contacts = [
-            { name: 'VESU', number: '7435996000', address: 'MAHAVIDEH DHAM, 3rd Floor, Maharana Pratap Road, Vesu, SURAT.', mapLink: 'https://maps.app.goo.gl/doL47s44S25tsEUw6', modalClass: 'vesu-details' },
-            { name: 'Kailashnagar', number: '8347196000', address: 'F-04, Shankheshwar Complex, Kailash Nagar, Surat(Opposite Raymond Show Room, Majura Gate).', mapLink: 'https://maps.app.goo.gl/Nzm2hS3P9mheB7766', modalClass: 'kailashnagar-details-F4' },
-            { name: 'Kailashnagar', number: '8347196000', address: 'F-06, Shankheshwar Complex, Kailash Nagar, Surat(Opposite Raymond Show Room, Majura Gate).', mapLink: 'https://maps.app.goo.gl/Nzm2hS3P9mheB7766', modalClass: 'kailashnagar-details-F6' },
-            { name: 'Kailashnagar', number: '7434096000', address: 'F-06, Shankheshwar Complex, Kailash Nagar, Surat(Opposite Raymond Show Room, Majura Gate).', mapLink: 'https://maps.app.goo.gl/Nzm2hS3P9mheB7766', modalClass: 'kailashnagar-details-Equipment' },
-            { name: 'Kailashnagar', number: '8347496000', address: 'F-06, Shankheshwar Complex, Kailash Nagar, Surat(Opposite Raymond Show Room, Majura Gate).', mapLink: 'https://maps.app.goo.gl/Nzm2hS3P9mheB7766', modalClass: 'kailashnagar-details-Xray-Sono' },
-            { name: 'Pal', number: '9586069600', address: 'Shop No. 5, Western Arena, B/s. Western BusinessHub, L.P. Sawani Road, Pal, Surat.', mapLink: 'https://maps.app.goo.gl/navz4yMP2hbVF4y8A', modalClass: 'pal-details' },
-            { name: 'ADAJAN', number: '7435019600', address: 'Shop No. 29, KUNTI SHOPPING CENTER, Above Sai Xerox, Deepa Comp., Adajan, Surat.', mapLink: 'https://maps.app.goo.gl/YRqS1U5j62rhp8Xk6', modalClass: 'adajan-details' },
-            { name: 'KATARGAM', number: '8109609600', address: 'PARESH APART, Nr. Nitisuri Aaradhna Bhavan, Katargam, Surat', mapLink: 'https://maps.app.goo.gl/gdWEoqJGkYUJnkd18c', modalClass: 'katargam-details' },
-            // Add more contacts here
-        ];
-
-        // Function to create WhatsApp links
-        function createWhatsAppLinks() {
-            contacts.forEach(contact => {
-                const containers = document.querySelectorAll(`.${contact.modalClass}`);
-                containers.forEach(container => {
-                    const contactDiv = document.createElement('div');
-                    contactDiv.className = 'modal-address mt-3';
-                    contactDiv.innerHTML = `
-                        <h3 class="text-white">${contact.name}</h3>
-                        <p class="fs-4 mb-0">
-                            <a href="${contact.mapLink}" target="_blank">
-                                <i class="fa-solid fa-location-dot"></i>
-                                ${contact.address}
-                            </a>
-                        </p>
-                        <div class="mt-2 d-sm-flex">
-                            <span class="p-2 rounded fs-4 text-white">M. ${contact.number}</span>
-                            <div class="d-flex col-12 col-sm-5 ms-sm-3 mt-2 mt-sm-0">
-                                <a href="tel:${contact.number}" class="d-flex align-items-center">
-                                <i class="fa-solid fa-phone fs-4 p-2 rounded text-white" style="background-color: #C9B582;"></i>
-                                </a>
-                                <a href="https://wa.me/${contact.number}?text=Hello%20there!" target="_blank" class="d-flex align-items-center ms-3">
-                                    <i class="fa-brands fa-whatsapp fs-4 p-2 rounded text-white" style="background-color: #4AC958;"></i>
-                                </a>
-                            </div>
-                        </div>
-                    `;
-                    container.appendChild(contactDiv);
-                });
-            });
-        }
-
-        // Call the function on page load
-        window.onload = createWhatsAppLinks;
-    </script>
+   <script src="assets/js/contact.js"></script>
 
 
 </head>
@@ -93,7 +45,7 @@
 
     <!-- ======= Hero Section ======= -->
     <section id="hero">
-        <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div id="heroCarousel" data-bs-interval="2000" class="carousel slide carousel-fade" data-bs-ride="carousel">
             <ol class="carousel-indicators" id="hero-carousel-indicators"></ol>
             <div class="carousel-inner" role="listbox">
                 <!-- Slide 1 -->
@@ -143,10 +95,10 @@
                         </div>
                         <div class="row ">
                             <div class="col-3 text-center border-bottom-custom border-right-custom">
-                                <div class="text-theme">ABOUT US</div>
+                                <div class="text-theme mt-2">ABOUT US</div>
                             </div>
-                            <div class="col-9 border-bottom-custom">
-                                <p>The newly developed Health care centre is designed for maximum comfort and usability
+                            <div class="col-9 border-bottom-custom ">
+                                <p class="mt-2">The newly developed Health care centre is designed for maximum comfort and usability
                                     for
                                     the
                                     incoming patients with all the modern amenities.</p>
@@ -159,19 +111,19 @@
                                     rates.
                                 </p>
                             </div>
-                            <div class="col-3 text-center border-bottom-custom border-right-custom">
-                                <div class="text-theme">MISSION</div>
+                            <div class="col-3 text-center border-bottom-custom border-right-custom ">
+                                <div class="text-theme mt-2">MISSION</div>
                             </div>
                             <div class="col-9 border-bottom-custom">
-                                <p>To provide the highest quality of healthcare to all the classes of society at the
+                                <p  class="mt-2">To provide the highest quality of healthcare to all the classes of society at the
                                     most
                                     affordable rates.</p>
                             </div>
                             <div class="col-3 text-center border-right-custom">
-                                <div class="text-theme">VISION</div>
+                                <div class="text-theme mt-2">VISION</div>
                             </div>
                             <div class="col-9">
-                                <p>To develop, operate and expand the horizon of affordable holistic healthcare for the
+                                <p class="mt-2">To develop, operate and expand the horizon of affordable holistic healthcare for the
                                     society in a sustainable and charitable way.</p>
                             </div>
                         </div>
@@ -752,7 +704,7 @@
         <!-- End Gallery Section -->
 
         <!-- ======= Contact Section ======= -->
-        <section id="contact" class="contact">
+        <section id="contact" class="contact section-bg">
             <div class="container">
                 <div class="row d-flex ">
                     <div class="col-lg-6">
@@ -887,11 +839,52 @@
     <script src="assets/js/main.js"></script>
     <!-- header.js  -->
     <script src="assets/js/header.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.querySelector("form");
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); // Prevent the default form submission
+                const formData = new FormData(form);
+
+                fetch("https://formspree.io/f/mdoqjbbz", {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                })
+                    .then(response => {
+                        if (response.ok) {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Thank you!',
+                                text: 'Your message has been sent successfully.',
+                                showConfirmButton: false,
+                                timer: 2000
+                            }).then(() => {
+                                form.reset(); // Reset the form
+                                location.reload(); // Refresh the page
+                            });
+                        } else {
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Oops...',
+                                text: 'There was a problem with your submission. Please try again.'
+                            });
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Oops...',
+                            text: 'There was a problem with your submission. Please try again.'
+                        });
+                    });
+            });
+        });
+    </script>
 </body>
 
-
- 
-
-
-</body>
 </html>

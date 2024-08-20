@@ -78,13 +78,16 @@ h6 {
 
 .bg-theme-secondary{
   background-color: rgb(164,139,75) !important;
-}
+} 
 
 .border-bottom-custom{
   border-bottom: 2px solid  rgb(237, 188, 84) !important;;
 }
 .border-right-custom{
   border-right: 2px solid  rgb(237, 188, 84) !important;;
+}
+.border-left-custom{
+  border-left: 2px solid  rgba(24, 23, 22, 0.644) !important;;
 }
 
 /*--------------------------------------------------------------
