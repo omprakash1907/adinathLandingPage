@@ -349,13 +349,130 @@ const doctors = [
     }
 ];
 
+const doctor2 = [
+    {
+        name: "Dr. Priyank Shah",
+        specialty: "M.B.B.S, M.D. (Medicine) Physician",
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        time: "12:30 PM to 1:30 PM"
+    },
+    {
+        name: "Dr. Pratik Savla",
+        specialty: "DNB Medicine (FID, FNB Infectious Disease)",
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        time: "4:00 PM to 6:00 PM"
+    },
+    {
+        name: "Dr. Ankit Gandhi",
+        specialty: "M.D. Physician",
+        days: ["Tuesday", "Wednesday", "Friday"],
+        time: "12:00 PM to 1:00 PM"
+    },
+    {
+        name: "Dr. Mohit Shethia",
+        specialty: "MD. DNB (Gastroologist)",
+        days: ["Monday", "Thursday"],
+        time: "6:00 PM to 7:00 PM"
+    },
+    {
+        name: "Dr. Ishan Shah",
+        specialty: "M.B.B.S, DTMH, CCEBDM, Physician",
+        days: ["Wednesday"],
+        time: "3:00 PM to 4:00 PM"
+    },
+    {
+        name: "Dr. Dhaval Shah",
+        specialty: "DM (Cardiology) MD (Medicine)",
+        days: ["Saturday"],
+        time: "1:00 PM to 2:00 PM"
+    },
+    {
+        name: "Dr. Akash Shah",
+        specialty: "M.B.B.S, M.S. Orthopaedic - FIAS",
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        time: "4:00 PM to 5:00 PM"
+    },
+    {
+        name: "Dr. Bhavesh Upadhyay",
+        specialty: "Asutosh Hospital Medical Officer",
+        days: ["Saturday"],
+        time: "5:00 PM to 6:00 PM"
+    },
+    {
+        name: "Dr. Aman Kanetwala",
+        specialty: "Dentist",
+        days: ["Monday", "Tuesday", "Saturday"],
+        time: "3:00 PM to 6:00 PM"
+    },
+    {
+        name: "Dr. Harshad S. Trivedi",
+        specialty: "ENT Specialist",
+        days: ["Tuesday", "Friday"],
+        time: "4:30 PM to 5:30 PM"
+    },
+    {
+        name: "Dr. Hiral N. Kataria",
+        specialty: "Pediatrician (MBDCH)",
+        days: ["Monday", "Thursday"],
+        time: "12:30 PM to 1:30 PM"
+    },
+    {
+        name: "Dr. Jana J. Gadhvi",
+        specialty: "Homeopathic (BHMS-NDDY)",
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        time: "10:00 AM to 11:00 AM"
+    },
+    {
+        name: "Dr. Manasi Patel",
+        specialty: "BHMS, C.C.H.",
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        time: "10:00 AM to 12:00 PM"
+    },
+    {
+        name: "Dr. Hiral Solanki",
+        specialty: "BHMS, C.C.H.",
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        time: "5:00 PM to 8:00 PM"
+    },
+    {
+        name: "Dr. Dharm Mehta",
+        specialty: "MBBS, MD Skin",
+        days: ["Tuesday", "Friday"],
+        time: "4:15 PM to 5:15 PM"
+    },
+    {
+        name: "Dr. Yashan Vasa",
+        specialty: "Physiotherapy",
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        time: "8:00 AM to 1:00 PM"
+    },
+    {
+        name: "Dr. Anita Dodhari",
+        specialty: "Physiotherapy",
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        time: "1:00 PM to 5:00 PM"
+    },
+    {
+        name: "Dr. Janak Dicholkar",
+        specialty: "Physiotherapy",
+        days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        time: "5:00 PM to 8:00 PM"
+    },
+    {
+        name: "Dr. Amilsh Somani",
+        specialty: "Radiologist",
+        days: ["Prior Appointment"]
+    }
+];
 
-const doctorCardsContainer = document.getElementById('doctor-cards');
+
+
+const doctorCardsContainer = document.getElementById('doctor-cards-vesu');
 
 doctors.forEach(doctor => {
     const card = `
         <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-3">
-            <div class="card bg-theme-light">
+            <div class="card bg-theme-light rounded-0">
                 <div class="row g-0">
                     <div class="col-4 p-2 d-flex align-items-center">
                         <img src="https://img.freepik.com/vector-premium/avatar-medico-barbudo-doctor-estetoscopio-vector-illustrationxa_276184-31.jpg"
@@ -377,4 +494,33 @@ doctors.forEach(doctor => {
         </div>
     `;
     doctorCardsContainer.innerHTML += card;
+});
+
+const doctorCardsKailshnagar = document.getElementById('doctor-cards-kailashnagar');
+
+doctor2.forEach(doctor => {
+    const card = `
+        <div class="col-12 col-sm-6 col-md-4 col-lg-4 mb-3">
+            <div class="card bg-theme-light rounded-0">
+                <div class="row g-0">
+                    <div class="col-4 p-2 d-flex align-items-center">
+                        <img src="https://img.freepik.com/vector-premium/avatar-medico-barbudo-doctor-estetoscopio-vector-illustrationxa_276184-31.jpg"
+                            class="img-fluid rounded-circle" alt="${doctor.name}">
+                    </div>
+                    <div class="col-8">
+                        <div class="card-body py-0 my-2 border-left-custom ">
+                            <h5 class="card-title fs-6 mb-0 ">${doctor.name.toUpperCase()}</h5>
+                            <p class="card-text mb-2">${doctor.qualification}</p>
+                            <div class="bg-theme text-white p-2 rounded-2 w-100">
+                                <a href="#" class="bg-theme text-white p-0 rounded-2 w-100">${doctor.specialty}</a>
+                            </div>
+                            <p class="card-text mt-2 mb-0"><small class="text-muted">Days: ${doctor.days.join(', ')}</small></p>
+                            <p class="card-text mt-0"><small class="text-muted">Time: ${doctor.time}</small></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+    doctorCardsKailshnagar.innerHTML += card;
 });

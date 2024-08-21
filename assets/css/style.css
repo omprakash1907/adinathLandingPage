@@ -262,6 +262,37 @@ h6 {
   max-height: 90px;
 }
 
+.navbar-nav .nav-link {
+  padding: 10px 15px;
+}
+
+.logo img {
+  max-height: 50px; /* Adjust based on your design */
+}
+
+.offcanvas-header {
+  background-color: #f8f9fa; /* Background color */
+}
+
+.offcanvas-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.appointment-btn {
+  background-color: #28a745;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 5px;
+}
+
+@media (max-width: 991px) {
+  .navbar ul {
+      display: none;
+  }
+}
+
+
 /**
 * Appointment Button
 */
