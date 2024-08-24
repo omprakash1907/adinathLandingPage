@@ -64,6 +64,32 @@ h6 {
   background: #777D54 !important;
 }
 
+.bg-theme-light {
+  background: #777d5465 !important;
+}
+
+.text-theme{
+  color: rgb(164,139,75) !important;
+}
+
+.text-theme-secondary {
+  color: #777D54 !important;
+}
+
+.bg-theme-secondary{
+  background-color: rgb(164,139,75) !important;
+} 
+
+.border-bottom-custom{
+  border-bottom: 2px solid  rgb(237, 188, 84) !important;;
+}
+.border-right-custom{
+  border-right: 2px solid  rgb(237, 188, 84) !important;;
+}
+.border-left-custom{
+  border-left: 2px solid  rgba(24, 23, 22, 0.644) !important;;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -235,6 +261,37 @@ h6 {
 #header .logo img {
   max-height: 90px;
 }
+
+.navbar-nav .nav-link {
+  padding: 10px 15px;
+}
+
+.logo img {
+  max-height: 50px; /* Adjust based on your design */
+}
+
+.offcanvas-header {
+  background-color: #f8f9fa; /* Background color */
+}
+
+.offcanvas-title {
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.appointment-btn {
+  background-color: #28a745;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 5px;
+}
+
+@media (max-width: 991px) {
+  .navbar ul {
+      display: none;
+  }
+}
+
 
 /**
 * Appointment Button
@@ -900,6 +957,179 @@ section {
 }
 
 /*--------------------------------------------------------------
+# Counter
+--------------------------------------------------------------*/
+
+.counter-section {
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #C2AB6D;
+    border-radius: 8px;
+   
+}
+
+.counter-heading {
+    color: white;
+    background-color: #727B4E;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    font-size: 2rem;
+}
+
+table tr{
+    border: 1px solid #C2AB6D;
+}
+
+table th {
+    color: #C2AB6D;
+}
+
+.footer {
+    margin-top: 20px;
+}
+
+.footer p {
+    margin: 5px 0;
+    color: #555;
+}
+
+.th-color {
+    color: #9B7B3C;
+    background: #F1E8D9;
+}
+td {
+    color: #727B4E;
+}
+
+tr td:nth-child(1){
+    color: #9B7B3C;
+    font-weight: bold;
+}
+
+tr td:nth-child(2),
+tr td:nth-child(3),
+tr td:nth-child(4){
+    font-weight: bold;
+    color: #727B4E;
+}
+
+.summary-table {
+    margin-bottom: 30px;
+}
+
+.summary-table tr th{
+    color: #9B7B3C;
+}
+
+.details-table tr th{
+    background-color:#F1E8D9;
+    color: #9B7B3C;
+}
+
+/* Media Queries for smaller devices */
+@media (max-width: 768px) {
+    .counter-heading {
+        font-size: 1.5rem;
+    }
+    .container {
+        padding: 10px;
+    }
+    section {
+        padding: 15px;
+    }
+    .summary-table, .details-table {
+        font-size: 0.9rem;
+    }
+    .footer p, .footer span {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .counter-heading {
+        font-size: 1.25rem;
+        padding: 8px;
+    }
+    .footer p, .footer span {
+        font-size: 0.85rem;
+    }
+    .summary-table, .details-table {
+        font-size: 0.8rem;
+    }
+    .container {
+        margin: 20px auto;
+        padding: 5px;
+    }
+    section {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .counter-heading {
+        font-size: 1rem;
+        padding: 6px;
+    }
+    .summary-table, .details-table {
+        font-size: 0.7rem;
+    }
+    .footer p, .footer span {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .counter-heading {
+        font-size: 0.9rem;
+        padding: 4px;
+    }
+    .summary-table, .details-table {
+        font-size: 0.6rem;
+    }
+    .footer p, .footer span {
+        font-size: 0.6rem;
+    }
+}
+
+@media (max-width: 300px) {
+    .counter-heading {
+        font-size: 0.75rem;
+        padding: 2px;
+        margin-bottom: 10px;
+    }
+    .summary-table, .details-table {
+        font-size: 0.5rem;
+    }
+    .footer p, .footer span {
+        font-size: 0.5rem;
+    }
+    section {
+        padding: 5px;
+    }
+}
+
+@media (max-width: 200px) {
+    .counter-heading {
+        font-size: 0.6rem;
+        padding: 1px;
+    }
+    .summary-table, .details-table {
+        font-size: 0.4rem;
+    }
+    .footer p, .footer span {
+        font-size: 0.4rem;
+    }
+    .container {
+        padding: 0;
+    }
+    section {
+        padding: 2px;
+    }
+}
+
+
+/*--------------------------------------------------------------
 # About Us
 --------------------------------------------------------------*/
 .about .content h3 {
@@ -1416,85 +1646,19 @@ svg {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-.contact .info-box {
-  color: #444444;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(214, 215, 216, 0.5);
-  padding: 20px 0 30px 0;
-}
-
-.contact .info-box i {
-  font-size: 32px;
-  color: #777D54;
-  border-radius: 50%;
-  padding: 8px;
-  border: 2px dotted #c5ebec;
-}
-
-.contact .info-box h3 {
-  font-size: 20px;
-  color: #777777;
-  font-weight: 700;
-  margin: 10px 0;
-}
-
-.contact .info-box p {
-  padding: 0;
-  line-height: 24px;
-  font-size: 14px;
-  margin-bottom: 0;
-}
-
-.contact .php-email-form {
-  box-shadow: 0 0 20px rgba(214, 215, 216, 0.5);
-  padding: 30px;
-}
-
-.contact .php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: left;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.contact .php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-.contact .php-email-form input {
-  padding: 10px 15px;
-}
-
-.contact .php-email-form textarea {
-  padding: 12px 15px;
-}
-
-
-
-.contact .php-email-form button[type=submit] {
+.social-links a {
+  font-size: 18px;
+  display: inline-block;
   background: #777D54;
-  border: 0;
-  padding: 10px 30px;
   color: #fff;
-  transition: 0.4s;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 10px;
   border-radius: 4px;
-}
-
-.contact .php-email-form button[type=submit]:hover {
-  background: black;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
 }
 
 @keyframes animate-loading {
@@ -1540,20 +1704,7 @@ svg {
   font-family: "Roboto", sans-serif;
 }
 
-#footer .footer-top .social-links a {
-  font-size: 18px;
-  display: inline-block;
-  background: #777D54;
-  color: #fff;
-  line-height: 1;
-  padding: 8px 0;
-  margin-right: 10px;
-  border-radius: 4px;
-  text-align: center;
-  width: 36px;
-  height: 36px;
-  transition: 0.3s;
-}
+
 
 
 
