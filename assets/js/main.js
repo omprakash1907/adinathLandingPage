@@ -217,56 +217,100 @@
   /**
    * Clients Slider
    */
-  new Swiper('.gallery-slider', {
-    speed: 400,
-    loop: true,
-    centeredSlides: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 1,
-    spaceBetween: 20,
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
+  document.addEventListener("DOMContentLoaded", function () {
+    const galleryData = [
+        { path: "assets/img/gallery/Narendra Modi Photo.webp" },
+        { path: "assets/img/gallery/Harsh Sanghvi Visit 1.webp" },
+        { path: "assets/img/gallery/Harsh Sanghvi Visit.webp" },
+        { path: "assets/img/gallery/Arvindbhai Rana.webp" },
+        { path: "assets/img/gallery/Darshanaben Jardosh.webp" },
+        { path: "assets/img/photos/1.webp" },
+        { path: "assets/img/photos/2.webp" },
+        { path: "assets/img/photos/3.webp" },
+        { path: "assets/img/photos/4.webp" },
+        { path: "assets/img/photos/5.webp" },
+        { path: "assets/img/photos/6.webp" },
+        { path: "assets/img/photos/7.webp" },
+        { path: "assets/img/photos/8.webp" },
+        { path: "assets/img/photos/9.webp" },
+        { path: "assets/img/photos/10.webp" },
+        { path: "assets/img/photos/11.webp" },
+        { path: "assets/img/photos/12.webp" },
+        { path: "assets/img/photos/13.webp" },
+        { path: "assets/img/photos/14.webp" },
+        { path: "assets/img/photos/15.webp" }
+    ];
+
+    const galleryContainer = document.querySelector(".swiper-wrapper");
+
+    galleryData.forEach((item) => {
+        const slide = document.createElement("div");
+        slide.classList.add("swiper-slide");
+
+        const link = document.createElement("a");
+        link.classList.add("gallery-lightbox");
+        link.href = item.path;
+
+        const img = document.createElement("img");
+        img.src = item.path;
+        img.classList.add("img-fluid");
+        img.alt = "";
+
+        link.appendChild(img);
+        slide.appendChild(link);
+        galleryContainer.appendChild(slide);
+    });
+
+    var swiper = new Swiper('.gallery-slider', {
+        speed: 400,
+        loop: true,
+        centeredSlides: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: true
+        },
         slidesPerView: 1,
-        spaceBetween: 20
-      },
-      640: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      },
-      992: {
-        slidesPerView: 5,
-        spaceBetween: 20
-      }
-    }
-  });
+        spaceBetween: 20,
+        pagination: {
+            el: '.swiper-pagination',
+            type: 'bullets',
+            clickable: true
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            },
+            640: {
+                slidesPerView: 3,
+                spaceBetween: 20
+            },
+            992: {
+                slidesPerView: 5,
+                spaceBetween: 20
+            }
+        }
+    });
 
+    // Initiate gallery lightbox
+    const galleryLightbox = GLightbox({
+        selector: '.gallery-lightbox'
+    });
 
-  /**
-   * Initiate gallery lightbox 
-   */
-  const galleryLightbox = GLightbox({
-    selector: '.gallery-lightbox'
-  });
+    // Animation on scroll
+    window.addEventListener('load', () => {
+        AOS.init({
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+    });
 
-  /**
-   * Animation on scroll
-   */
-  window.addEventListener('load', () => {
-    AOS.init({
-      duration: 1000,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    })
-  });
+    // Initiate Pure Counter
+    new PureCounter();
+});
+
 
   /**
    * Initiate Pure Counter 
