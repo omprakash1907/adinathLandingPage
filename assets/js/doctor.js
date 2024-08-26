@@ -471,17 +471,18 @@ const doctorCardsContainer = document.getElementById("doctor-cards-vesu");
 
 doctors.forEach((doctor) => {
   const card = `
-     <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-3">
+    <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-3">
     <div class="card rounded-0 doc-bg-theme border-0">
-        <div class="row g-0 h-100" style="overflow: hidden;">
-            <div class="col-4 d-flex align-items-center justify-content-center">
+        <div class="row g-0 h-100 position-relative" style="overflow: hidden;">
+            <div class="col-4 d-flex align-items-center justify-content-center position-relative">
                 <img src="https://img.freepik.com/vector-premium/avatar-medico-barbudo-doctor-estetoscopio-vector-illustrationxa_276184-31.jpg"
                     class="img-fluid rounded-circle" alt="${doctor.name}">
+                <div class="separator-line"></div>
             </div>
             <div class="col-8 d-flex align-items-center">
-                <div class="card-body mt-1 border-left-custom">
-                    <h5 class="card-title fs-6 mb-0">${doctor.name.toUpperCase()}</h5>
-                    <p class="card-text  m-0">${doctor.qualification}</p>
+                <div class="card-body mt-1">
+                    <h5 class="card-title fs-6 mb-0 text-theme">${doctor.name.toUpperCase()}</h5>
+                    <p class="card-text  m-0 text-theme-secondary">${doctor.qualification}</p>
                     <p class="card-text m-0"><small class="text-muted">Days: ${doctor.days.join(
                       ", "
                     )}</small></p>
@@ -494,6 +495,7 @@ doctors.forEach((doctor) => {
     </div>
 </div>
 
+
     `;
   doctorCardsContainer.innerHTML += card;
 });
@@ -505,17 +507,18 @@ const doctorCardsKailshnagar = document.getElementById(
 doctor2.forEach((doctor) => {
   const card = `
         <div class="col-12 col-md-6 col-lg-6 col-xl-4 mb-3">
-    <div class="card doc-bg-theme rounded-0 border-0">
-        <div class="row g-0 align-items-center h-100">
-            <div class="col-4 p-3 d-flex justify-content-center align-items-center">
+    <div class="card rounded-0 doc-bg-theme border-0">
+        <div class="row g-0 h-100 position-relative" style="overflow: hidden;">
+            <div class="col-4 d-flex align-items-center justify-content-center position-relative">
                 <img src="https://img.freepik.com/vector-premium/avatar-medico-barbudo-doctor-estetoscopio-vector-illustrationxa_276184-31.jpg"
                     class="img-fluid rounded-circle" alt="${doctor.name}">
+                <div class="separator-line"></div>
             </div>
-            <div class="col-8">
-                <div class="card-body py-0 my-1 border-left-custom">
-                    <h5 class="card-title fs-6 mb-0 ">${doctor.name.toUpperCase()}</h5>
-                    <p class="card-text  m-0 ">${doctor.specialty}</p>
-                    <p class="card-text  m-0"><small class="text-muted">Days: ${doctor.days.join(
+            <div class="col-8 d-flex align-items-center">
+                <div class="card-body mt-1">
+                    <h5 class="card-title fs-6 mb-0 text-theme">${doctor.name.toUpperCase()}</h5>
+                    <p class="card-text  m-0 text-theme-secondary">${doctor.specialty}</p>
+                    <p class="card-text m-0"><small class="text-muted">Days: ${doctor.days.join(
                       ", "
                     )}</small></p>
                     <p class="card-text mt-0"><small class="text-muted">Time: ${
