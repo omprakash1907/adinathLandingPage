@@ -280,6 +280,7 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+/* General Header Styles */
 #header {
   background: #fff;
   transition: all 0.5s;
@@ -313,20 +314,36 @@ h6 {
   color: #555555;
 }
 
-#header .logo img {
-  max-height: 90px;
-}
-
+/* Navbar Links */
 .navbar-nav .nav-link {
   padding: 10px 15px;
 }
 
-.logo img {
-  max-height: 50px; /* Adjust based on your design */
+/* Desktop Logo */
+.logo-desktop img {
+  max-height: 70px;
 }
 
+/* Mobile Logo Adjustments */
+.logo-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-mobile .logo-img-mobile {
+  max-height: 70px;
+  width: auto;
+}
+
+.logo-mobile .logo-name-mobile {
+  max-height: 70px;
+  width: auto;
+}
+
+/* Offcanvas Menu */
 .offcanvas-header {
-  background-color: #f8f9fa; /* Background color */
+  background-color: #f8f9fa;
 }
 
 .offcanvas-title {
@@ -347,8 +364,7 @@ h6 {
   }
 }
 
-/*  Appointment Button */
-
+/* Appointment Button */
 .appointment-btn {
   margin-left: 25px;
   background: #777d54;
@@ -372,7 +388,6 @@ h6 {
     padding: 6px 15px;
   }
 }
-*/
 
 /*--------------------------------------------------------------
 # Navigation Menu
