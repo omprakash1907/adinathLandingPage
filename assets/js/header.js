@@ -1,7 +1,7 @@
 let header = document.getElementById("header");
 
 let element = `
-<div class="container d-flex align-items-center justify-content-between">
+<div class="container d-flex align-items-center justify-content-between m-0">
     <!-- Desktop Logo -->
     <a href="index.html" class="logo logo-desktop d-none d-lg-block">
         <img src="assets/img/logos/Trust Name (Website).webp" alt="Trust Name" class="w-100" style="padding: 5px;">
@@ -16,7 +16,7 @@ let element = `
     </a>
 
     <!-- Navigation Menu -->
-    <nav id="navbar" class="navbar order-last order-lg-0">
+    <nav id="navbar" class="navbar order-last order-lg-0 pe-3">
         <ul class="d-none d-lg-flex">
             <li><a class="nav-link scrollto" href="/">HOME</a></li>
             <li><a class="nav-link scrollto" href="/#about">ABOUT</a></li>
@@ -25,7 +25,7 @@ let element = `
             <li><a class="nav-link scrollto" href="/document.html">DOCUMENT</a></li>
             <li><a class="nav-link scrollto" href="/#contact">CONTACTS</a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"></i>
+        <i class="bi bi-list mobile-nav-toggle d-lg-none " data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"></i>
     </nav><!-- .navbar -->
 
     <!-- Donation Button -->
