@@ -46,9 +46,7 @@ let element = `
             <li class="nav-item"><a class="nav-link" href="/">HOME</a></li>
             <li class="nav-item"><a class="nav-link" href="/#about">ABOUT</a></li>
             <li class="nav-item"><a class="nav-link" href="/#services">SERVICES</a></li>
-            <li class="nav-item"><a class="nav-link" href="/#departments">DEPARTMENTS</a></li>
             <li class="nav-item"><a class="nav-link" href="/document.html">DOCUMENT</a></li>
-            <li class="nav-item"><a class="nav-link" href="/doctor.html">DOCTORS</a></li>
             <li class="nav-item"><a class="nav-link" href="/#contact">CONTACTS</a></li>
         </ul>
         <button type="button" class="btn bg-theme-secondary text-white w-100 " data-bs-toggle="modal" data-bs-target="#donation">Make Donation</button>
