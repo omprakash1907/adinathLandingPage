@@ -38,13 +38,13 @@
 
 <body>
     <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top shadow-lg">
+    <header id="header" class=" shadow-lg">
     </header>
     <!-- End Header -->
     <!-- doctors section start -->
     <!-- doctor list for vesu -->
     <section class="doctor p-0 ">
-        <div class="breadcrumb bg-theme-light py-5 mt-lg-0 mt-4">
+        <div class="breadcrumb bg-theme-light py-lg-5 py-4 container">
             <div class="container-fluid">
                 <div class="row align-items-center justify-content-between">
                     <!-- Button Column -->
@@ -65,11 +65,14 @@
                         <div class="d-flex align-items-start">
                             <i class="fa-solid fa-location-dot fs-4 mt-2 me-2 text-theme"></i>
                             <div>
-                                <p class="mb-0 fs-4 text-theme-secondary">MAHAVIDEH DHAM, 3rd Floor</p>
-                                <p class="mb-0 fs-5 text-theme-secondary mb-1">Maharana Pratap Road, Vesu, SURAT-7</p>
-                                <div class="d-flex flex-column flex-md-row align-items-start mt-2">
+                                <p class="mb-0 fs-4 text-theme-secondary text-center text-md-start">MAHAVIDEH DHAM, 3rd
+                                    Floor</p>
+                                <p class="mb-0 fs-5 text-theme-secondary mb-1 text-center text-md-start">Maharana Pratap
+                                    Road, Vesu, SURAT-7</p>
+                                <div
+                                    class="d-flex flex-column flex-md-row align-items-center align-items-md-start mt-2">
                                     <a href="tel:8347196000"
-                                        class="btn bg-theme-secondary text-white rounded-2 py-1 fw-bold me-md-3 mb-3 mb-md-0">M.
+                                        class="btn bg-theme-secondary text-white rounded-2 py-1 fs-5 fw-bold me-md-3 mb-3 mb-md-0">M.
                                         7435996000</a>
                                     <div class="d-flex">
                                         <a href="tel:8347196000" class="d-flex align-items-center me-3">
@@ -89,6 +92,7 @@
                 </div>
             </div>
         </div>
+
 
         <!-- Available Services Section -->
         <section class="services-list text-theme-secondary py-4">
@@ -137,7 +141,7 @@
                 </div>
             </div>
         </section>
-        
+
 
 
 
@@ -153,7 +157,7 @@
     </section>
     <!-- doctor list for kailashnagar -->
     <section class="doctor p-0 ">
-        <div class="breadcrumb bg-theme-light py-5 mt-lg-0 mt-4">
+        <div class="breadcrumb bg-theme-light py-lg-5 py-4 container">
             <div class="container-fluid">
                 <div class="row align-items-center justify-content-between">
                     <!-- Button Column -->
@@ -175,12 +179,12 @@
                         <div class="d-flex align-items-start">
                             <i class="fa-solid fa-location-dot fs-4 mt-2 me-2 text-theme"></i>
                             <div>
-                                <p class="mb-0 fs-4 text-theme-secondary">F-06, Shankheshwar Complex, Kailash Nagar,</p>
-                                <p class="mb-0 fs-5 text-theme-secondary mb-1">Surat (Opposite Raymond Show Room, Majura
-                                    Gate).</p>
-                                <div class="d-flex flex-column flex-md-row align-items-start mt-2">
+                                <p class="mb-0 fs-4 text-theme-secondary">F-06, Shankheshwar Complex, </p>
+                                <p class="mb-0 fs-5 text-theme-secondary mb-1">Kailash Nagar, Surat</p>
+                                <div
+                                    class="d-flex flex-column flex-md-row align-items-center align-items-md-start mt-2">
                                     <a href="tel:8347196000"
-                                        class="btn bg-theme-secondary text-white rounded-2 py-1 fw-bold me-md-3 mb-3 mb-md-0">M.
+                                        class="btn bg-theme-secondary text-white rounded-2 py-1 fs-5 fw-bold me-md-3 mb-3 mb-md-0">M.
                                         8347196000</a>
                                     <div class="d-flex">
                                         <a href="tel:8347196000" class="d-flex align-items-center me-3">
@@ -253,6 +257,17 @@
             });
         });
     });
+
+    window.onscroll = function () {
+        const header = document.getElementById("header");
+        const scrollPosition = 200; // Adjust this value as needed
+
+        if (window.scrollY > scrollPosition) {
+            header.classList.add("fixed-header", "visible");
+        } else {
+            header.classList.remove("fixed-header", "visible");
+        }
+    };
 </script>
 
 </html>

@@ -79,25 +79,16 @@
   /**
    * Toggle .header-scrolled class to #header when page is scrolled
    */
-  let selectHeader = select('#header')
-  let selectTopbar = select('#topbar')
-  if (selectHeader) {
-    const headerScrolled = () => {
-      if (window.scrollY > 100) {
-        selectHeader.classList.add('header-scrolled')
-        if (selectTopbar) {
-          selectTopbar.classList.add('topbar-scrolled')
-        }
-      } else {
-        selectHeader.classList.remove('header-scrolled')
-        if (selectTopbar) {
-          selectTopbar.classList.remove('topbar-scrolled')
-        }
-      }
+
+  window.onscroll = function () {
+    const header = document.getElementById("header");
+    const scrollPosition = 200; // Adjust this value as needed
+    if (window.scrollY > scrollPosition) {
+      header.classList.add("fixed-header", "visible");
+    } else {
+      header.classList.remove("fixed-header", "visible");
     }
-    window.addEventListener('load', headerScrolled)
-    onscroll(document, headerScrolled)
-  }
+  };
 
   /**
    * Back to top button
@@ -189,7 +180,7 @@
    * Testimonials slider
    */
   new Swiper('.testimonials-slider', {
-    speed: 600,
+    speed: 200,
     loop: true,
     autoplay: {
       delay: 5000,
