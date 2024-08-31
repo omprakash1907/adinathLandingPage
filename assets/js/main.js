@@ -215,6 +215,7 @@
         { path: "assets/img/gallery/Harsh Sanghvi Visit.webp" },
         { path: "assets/img/gallery/Arvindbhai Rana.webp" },
         { path: "assets/img/gallery/Darshanaben Jardosh.webp" },
+        {path : "assets/img/gallery/CC_S1677.jpg"},
         { path: "assets/img/photos/1.webp" },
         { path: "assets/img/photos/2.webp" },
         { path: "assets/img/photos/3.webp" },
