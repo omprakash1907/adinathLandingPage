@@ -239,8 +239,31 @@
         { path: "assets/img/photos/12.webp" },
         { path: "assets/img/photos/13.webp" },
         { path: "assets/img/photos/14.webp" },
-        { path: "assets/img/photos/15.webp" }
-    ];
+        { path: "assets/img/photos/15.webp" },
+        { path: "assets/img/gallery/new 31.8.24/WhatsApp Image 2024-08-31 at 17.20.56_332bef6c.webp"},
+        { "path": "assets/img/gallery/new 31.8.24/WhatsApp Image 2024-08-31 at 17.20.56_75380886.webp" },
+        { "path": "assets/img/gallery/new 31.8.24/WhatsApp Image 2024-08-31 at 17.20.57_3de235cf.webp" },
+        { "path": "assets/img/gallery/new 31.8.24/WhatsApp Image 2024-08-31 at 17.20.57_6861bbec.webp" },
+        { "path": "assets/img/gallery/new 31.8.24/WhatsApp Image 2024-08-31 at 17.20.57_75354724.webp" },
+        { "path": "assets/img/gallery/new 31.8.24/WhatsApp Image 2024-08-31 at 17.20.58_316908dd.webp" },
+        { "path": "assets/img/gallery/new 31.8.24/WhatsApp Image 2024-08-31 at 17.20.59_e2b9ee79.webp" },
+        { "path": "assets/img/gallery/new 31.8.24/WhatsApp Image 2024-08-31 at 17.21.00_07201328.webp" },
+        { "path": "assets/img/gallery/new 31.8.24/WhatsApp Image 2024-08-31 at 17.21.05_8eeec80c.webp" },
+        { "path": "assets/img/gallery/new 31.8.24/WhatsApp Image 2024-08-31 at 17.21.07_b9d7f7d2.webp" },
+        { "path": "assets/img/gallery/new 31.8.24/WhatsApp Image 2024-08-31 at 17.21.34_cdcaf2ea.webp" },
+        { "path": "assets/img/gallery/new 31.8.24/WhatsApp Image 2024-08-31 at 17.21.35_e4a0958e.webp" },
+        { "path": "assets/img/gallery/new 31.8.24/WhatsApp Image 2024-08-31 at 17.21.35_f74350a2.webp" },
+        { "path": "assets/img/gallery/new 31.8.24/WhatsApp Image 2024-08-31 at 17.21.36_85af755f.webp" },
+        { "path": "assets/img/gallery/new 31.8.24/WhatsApp Image 2024-08-31 at 17.21.37_afa7478f.webp" },
+        { "path": "assets/img/gallery/new 31.8.24/WhatsApp Image 2024-08-31 at 17.21.39_2c222f69.webp" },
+        { "path": "assets/img/gallery/new 31.8.24/WhatsApp Image 2024-08-31 at 17.21.40_b5869fe1.webp" },
+        { "path": "assets/img/gallery/new 31.8.24/WhatsApp Image 2024-08-31 at 17.21.41_7f7ce9bb.webp" },
+        { "path": "assets/img/gallery/new 31.8.24/WhatsApp Image 2024-08-31 at 17.21.41_88f65f79.webp" },
+        { "path": "assets/img/gallery/new 31.8.24/WhatsApp Image 2024-08-31 at 17.21.42_593fda84.webp" },
+        { "path": "assets/img/gallery/new 31.8.24/WhatsApp Image 2024-08-31 at 17.21.42_dbe30e68.webp" },
+        { "path": "assets/img/gallery/new 31.8.24/WhatsApp-Image-2024-08-31-at-17.21.43_08b46399.webp" }
+
+      ];
 
     const galleryContainer = document.querySelector(".swiper-wrapper");
 
