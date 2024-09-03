@@ -1,7 +1,7 @@
 let header = document.getElementById("header");
 
 let element = `
-<div class="container d-flex align-items-center justify-content-between mx-auto px-3 px-lg-1">
+<div class="container d-flex align-items-center justify-content-between mx-auto px-5 px-lg-1">
     <!-- Desktop Logo -->
     <a href="index.html" class="logo logo-desktop d-none d-lg-block">
         <img src="assets/img/logos/Trust Name (Website).webp" alt="Trust Name" class="w-100" style="padding: 5px;">
