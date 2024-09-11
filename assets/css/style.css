@@ -323,7 +323,7 @@ h6 {
 }
 
 .logo-mobile .logo-name-mobile {
-  max-height: 70px;
+  max-height: 57px;
   width: auto;
 }
 
@@ -337,12 +337,6 @@ h6 {
   font-size: 1.25rem;
 }
 
-/* .appointment-btn {
-  background-color: #28a745;
-  color: #fff;
-  padding: 8px 20px;
-  border-radius: 5px;
-} */
 
 @media (max-width: 991px) {
   .navbar ul {
@@ -373,6 +367,9 @@ h6 {
     margin: 0 15px 0 0;
     padding: 6px 15px;
   }
+  .offcanvas-start {
+    width: 50% !important; /* Override default width for mobile */
+}
 }
 
 /*--------------------------------------------------------------
