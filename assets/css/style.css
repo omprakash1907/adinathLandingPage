@@ -82,7 +82,7 @@ h6 {
 .card {
   height: 100%;
   width: 100%;
-  border: none; /* Remove card border */
+  border: none; 
 }
 
 .hidden-doctors {
@@ -91,11 +91,12 @@ h6 {
 
 
 .card-body {
-  padding: 10px; /* Adjust padding */
-  display: flex;
+  padding: 10px; 
   flex-direction: column;
-  justify-content: center;
   flex-grow: 1;
+  position: relative;
+  z-index: 2;
+  padding-left: 20px;
 }
 
 /* Border Customization */
@@ -245,10 +246,6 @@ h6 {
   opacity: 1;
 }
 
-
-
-
-
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -287,8 +284,6 @@ h6 {
 
 #header .logo {
   font-size: 28px;
-  margin: 0;
-  padding: 0;
   line-height: 1;
   font-weight: 600;
   letter-spacing: 0.5px;
@@ -302,7 +297,6 @@ h6 {
 /* Navbar Links */
 .navbar-nav .nav-link {
   padding: 10px 15px;
- 
 }
 
 /* Desktop Logo */
@@ -312,7 +306,6 @@ h6 {
 
 /* Mobile Logo Adjustments */
 .logo-mobile {
-  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -336,13 +329,6 @@ h6 {
   font-weight: bold;
   font-size: 1.25rem;
 }
-
-/* .appointment-btn {
-  background-color: #28a745;
-  color: #fff;
-  padding: 8px 20px;
-  border-radius: 5px;
-} */
 
 @media (max-width: 991px) {
   .navbar ul {
@@ -621,9 +607,6 @@ h6 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
 }
 
 #hero .container {
@@ -1124,8 +1107,6 @@ tr td:nth-child(4) {
 }
 
 .service-card {
-  /* width: 190px;
-  height: 254px; */
   padding: 0.8em;
   background-image: url(/assets/img/oie_2817128R4Ee0PZA.jpg);
   background-repeat: no-repeat;
@@ -1290,7 +1271,7 @@ svg {
 .d-flex.align-items-center .ms-3 {
   margin-left: 1rem;
 }
-/* Ensure no underlines on anchor tags */
+
 .modal-address a {
   text-decoration: none;
 }
@@ -1314,11 +1295,11 @@ svg {
   transform: translateY(-50%);
   width: 1px;
   height: 80%;
-  background-color: #727b4e; /* Adjust the color to match your theme */
+  background-color: #727b4e; 
   z-index: 1;
 }
 
-/* Ensure the line doesn't touch the card edges */
+
 .card {
   padding: 10px;
   box-sizing: border-box;
@@ -1326,12 +1307,6 @@ svg {
 
 .col-4.position-relative {
   position: relative;
-}
-
-.card-body {
-  position: relative;
-  z-index: 2;
-  padding-left: 20px; /* Adjust this if necessary to ensure the line is centered */
 }
 
 
@@ -1439,20 +1414,10 @@ svg {
   transition: 0.3s;
 }
 
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
-#footer {
+/* #footer {
   background: #eeeeee;
   color: #555555;
   font-size: 14px;
@@ -1559,18 +1524,18 @@ svg {
 
 #footer .footer-top .footer-newsletter form input[type='submit']:hover {
   background: black;
-}
+} */
 
 #footer .copyright {
   text-align: center;
   padding-top: 30px;
 }
-
+/* 
 #footer .credits {
   padding-top: 10px;
   text-align: center;
   font-size: 13px;
-}
+} */
 
 .whatspp {
   position: fixed;
@@ -1588,4 +1553,20 @@ svg {
   font-size: 28px;
   color: #fff;
   line-height: 0;
+}
+
+/* Event posts  */
+@media (min-width: 768px) {
+  .modal-body img {
+    max-width: 50%;
+    height: auto;
+  }
+}
+/* Adjust image height for smaller screens */
+@media (max-width: 767.98px) {
+  .modal-body img {
+    max-width: 100%;
+    height: 300px;
+    object-fit: cover;
+  }
 }

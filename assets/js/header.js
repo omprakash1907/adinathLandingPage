@@ -3,12 +3,12 @@ let header = document.getElementById("header");
 let element = `
 <div class="container d-flex align-items-center justify-content-between mx-auto px-3 px-lg-1">
     <!-- Desktop Logo -->
-    <a href="index.html" class="logo logo-desktop d-none d-lg-block">
+    <a href="index.html" class="logo m-0 p-0 logo-desktop d-none d-lg-block">
         <img src="assets/img/logos/Trust Name (Website).webp" alt="Trust Name" class="w-100" style="padding: 5px;">
     </a>
 
     <!-- Mobile Logo -->
-    <a href="index.html" class="logo logo-mobile d-lg-none w-100">
+    <a href="index.html" class="logo m-0 p-0 logo-mobile d-flex d-lg-none w-100">
         <div class="w-100 text-center">
             <img src="assets/img/logos/Trust Logo.png" alt="Trust Logo" class="img-fluid logo-img-mobile" style="padding: 5px;">
         </div>

@@ -335,4 +335,9 @@
 })()
 
 
-// rating section 
+// event posts section
+
+document.addEventListener('DOMContentLoaded', () => {
+  const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+  imageModal.show();
+});

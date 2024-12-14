@@ -480,7 +480,7 @@ doctors.forEach((doctor) => {
                 <div class="separator-line"></div>
             </div>
             <div class="col-8 d-flex align-items-center">
-                <div class="card-body mt-1">
+                <div class="card-body d-flex justify-content-center mt-1">
                     <h5 class="card-title fs-6 mb-0 text-theme">${doctor.name.toUpperCase()}</h5>
                     <p class="card-text  m-0 text-theme-secondary">${doctor.specialty}</p>
                     <p class="card-text m-0"><small class="text-muted">Days: ${doctor.days.join(
@@ -515,7 +515,7 @@ doctor2.forEach((doctor) => {
                 <div class="separator-line"></div>
             </div>
             <div class="col-8 d-flex align-items-center">
-                <div class="card-body mt-1">
+                <div class="card-body d-flex justify-content-center mt-1">
                     <h5 class="card-title fs-6 mb-0 text-theme">${doctor.name.toUpperCase()}</h5>
                     <p class="card-text  m-0 text-theme-secondary">${doctor.specialty}</p>
                     <p class="card-text m-0"><small class="text-muted">Days: ${doctor.days.join(
