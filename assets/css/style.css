@@ -316,7 +316,7 @@ h6 {
 }
 
 .logo-mobile .logo-name-mobile {
-  max-height: 70px;
+  max-height: 57px;
   width: auto;
 }
 
@@ -329,6 +329,13 @@ h6 {
   font-weight: bold;
   font-size: 1.25rem;
 }
+
+/* .appointment-btn {
+  background-color: #28a745;
+  color: #fff;
+  padding: 8px 20px;
+  border-radius: 5px;
+} */
 
 @media (max-width: 991px) {
   .navbar ul {
@@ -359,6 +366,9 @@ h6 {
     margin: 0 15px 0 0;
     padding: 6px 15px;
   }
+  .offcanvas-start {
+    width: 50% !important; /* Override default width for mobile */
+}
 }
 
 /*--------------------------------------------------------------
@@ -585,7 +595,7 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   width: 100%;
-  height: 80vh;
+  height: 100vh;
   background-color: rgba(60, 60, 60, 0.8);
   overflow: hidden;
   position: relative;
@@ -651,7 +661,6 @@ h6 {
   transform: translate3d(0, 0, 0);
 }
 
-
 #hero-carousel-indicators li {
   text-indent: -9999px; /* Hides the text/numbers */
   background-color: #fff; /* Set background color for visibility */
@@ -666,10 +675,11 @@ h6 {
   background-color: #777d54; /* Different background color for active indicator */
 }
 
-
 #hero .carousel-item img {
   object-fit: cover;
   object-position: center;
+  width: 100%;
+  height: 100%;
 }
 
 #hero .btn-get-started {
@@ -693,16 +703,13 @@ h6 {
 @media (max-width: 992px) {
   #hero {
     height: 100vh;
-  }
-
-  #hero {
-    margin-top: 59px;
+    margin-top: 38%;
   }
 }
 
 @media (max-width: 768px) {
   #hero {
-    height: 70vh;
+    height: 80vh;
   }
 
   #hero h2 {

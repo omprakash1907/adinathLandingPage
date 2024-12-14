@@ -1,7 +1,7 @@
 let header = document.getElementById("header");
 
 let element = `
-<div class="container d-flex align-items-center justify-content-between mx-auto px-3 px-lg-1">
+<div class="container d-flex align-items-center justify-content-between mx-auto px-5 px-lg-1">
     <!-- Desktop Logo -->
     <a href="index.html" class="logo m-0 p-0 logo-desktop d-none d-lg-block">
         <img src="assets/img/logos/Trust Name (Website).webp" alt="Trust Name" class="w-100" style="padding: 5px;">
@@ -25,17 +25,20 @@ let element = `
             <li><a class="nav-link scrollto" href="/document.html">DOCUMENT</a></li>
             <li><a class="nav-link scrollto" href="/#contact">CONTACTS</a></li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle d-lg-none " data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"></i>
+        <i class="bi bi-list mobile-nav-toggle d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"></i>
     </nav><!-- .navbar -->
 
     <!-- Donation Button -->
     <a href="https://formbuilder.ccavenue.com/live/icici-bank/shree-aadinath-yuva-charitable-trust" target="_blank" class="appointment-btn bg-theme-secondary text-white scrollto d-none d-lg-block">
         <span class="d-none d-md-inline">Make</span> Donation
     </a>
-</div>
+</div>`;
 
+// Inject the header content
+header.innerHTML = element;
 
-<!-- Offcanvas Menu -->
+// Inject the offcanvas outside of the header element
+document.body.insertAdjacentHTML('beforeend', `
 <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title text-theme" id="offcanvasNavbarLabel">Menu</h5>
@@ -49,14 +52,7 @@ let element = `
             <li class="nav-item"><a class="nav-link" href="/document.html">DOCUMENT</a></li>
             <li class="nav-item"><a class="nav-link" href="/#contact">CONTACTS</a></li>
         </ul>
-        <button type="button" class="btn bg-theme-secondary text-white w-100 " data-bs-toggle="modal" data-bs-target="#donation">Make Donation</button>
+        <button type="button" class="btn bg-theme-secondary text-white w-100" data-bs-toggle="modal" data-bs-target="#donation">Make Donation</button>
     </div>
 </div>
-
-<!-- offcanvas menu -->
-
-
-
-`;
-
-header.innerHTML = element;
+`);
