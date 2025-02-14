@@ -344,8 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// video model functionality to open and close
-
+// video modal after gallery
 document.addEventListener('DOMContentLoaded', function () {
   const videoModal = document.getElementById('videoModal');
   const modalVideoContainer = document.getElementById('modalVideoContainer');
@@ -361,15 +360,23 @@ document.addEventListener('DOMContentLoaded', function () {
       // Insert new content based on video type
       if (videoType === 'youtube') {
           modalVideoContainer.innerHTML = `
-              <iframe src="${videoSrc}" 
+              <iframe src="${videoSrc}?autoplay=1" 
                       allowfullscreen
                       class="embed-responsive-item w-100 h-100"></iframe>`;
       } else if (videoType === 'local') {
           modalVideoContainer.innerHTML = `
-              <video controls class="w-100 h-100">
+              <video id="modalVideo" class="w-100 h-100" autoplay loop controls>
                   <source src="${videoSrc}" type="video/mp4">
                   Your browser does not support the video tag.
               </video>`;
+
+          // Wait for the DOM to update before playing
+          setTimeout(() => {
+              const modalVideo = document.getElementById('modalVideo');
+              if (modalVideo) {
+                  modalVideo.play().catch(error => console.log("Autoplay blocked:", error));
+              }
+          }, 100);
       }
   });
 
