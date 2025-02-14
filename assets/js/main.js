@@ -342,3 +342,39 @@ document.addEventListener('DOMContentLoaded', () => {
   const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
   imageModal.show();
 });
+
+
+// video model functionality to open and close
+
+document.addEventListener('DOMContentLoaded', function () {
+  const videoModal = document.getElementById('videoModal');
+  const modalVideoContainer = document.getElementById('modalVideoContainer');
+
+  videoModal.addEventListener('show.bs.modal', function (event) {
+      const clickedElement = event.relatedTarget; // The element that triggered the modal
+      const videoType = clickedElement.getAttribute('data-video-type');
+      const videoSrc = clickedElement.getAttribute('data-video-src');
+
+      // Clear previous content
+      modalVideoContainer.innerHTML = '';
+
+      // Insert new content based on video type
+      if (videoType === 'youtube') {
+          modalVideoContainer.innerHTML = `
+              <iframe src="${videoSrc}" 
+                      allowfullscreen
+                      class="embed-responsive-item w-100 h-100"></iframe>`;
+      } else if (videoType === 'local') {
+          modalVideoContainer.innerHTML = `
+              <video controls class="w-100 h-100">
+                  <source src="${videoSrc}" type="video/mp4">
+                  Your browser does not support the video tag.
+              </video>`;
+      }
+  });
+
+  // Reset modal content when closed
+  videoModal.addEventListener('hidden.bs.modal', function () {
+      modalVideoContainer.innerHTML = '';
+  });
+});

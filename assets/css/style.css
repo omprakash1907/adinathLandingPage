@@ -1596,3 +1596,24 @@ iframe {
   border: none;
   border-radius: 8px;
 }
+/* responsiveness of video model */
+.modal-content {
+  background-color: #000; /* Example: Dark background */
+  color: #fff; /* Example: White text */
+}
+.modal-body {
+  padding: 0; /* Remove default padding from modal body */
+}
+.modal-video {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+.modal-video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
